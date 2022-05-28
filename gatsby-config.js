@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Calpa Website`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://calpa.me/`
   },
   plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
@@ -9,18 +9,19 @@ module.exports = {
       "icon": "src/images/icon.png"
     }
   }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
+    }, {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+    `gatsby-transformer-remark`,
+  ]
 };
