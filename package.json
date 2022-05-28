@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
@@ -24,6 +24,7 @@
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.1",
+    "cross-env": "^7.0.3",
     "gatsby": "^4.15.0",
     "gatsby-plugin-image": "^2.15.0",
     "gatsby-plugin-manifest": "^4.15.0",
