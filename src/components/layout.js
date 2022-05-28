@@ -1,22 +1,33 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Grid } from '@mui/material';
+import { Helmet } from 'react-helmet';
+import NavBar from './NavBar';
 
-const Layout = ({ pageTitle, children }) => {
-    return (
-        <div>
-            <title>{pageTitle}</title>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
-            </nav>
-            <main>
-                <h1>{pageTitle}</h1>
-                {children}
-            </main>
-        </div>
-    )
+const defaultPageTitle = 'Calpa\'s Blog';
+
+function Layout({ pageTitle = defaultPageTitle, children }) {
+  return (
+    <>
+      <Helmet title={pageTitle} />
+      <NavBar />
+      <Grid
+        container
+        xs={12}
+        style={{
+          backgroundColor: '#f4f4f4',
+          height: '100vh',
+        }}
+      >
+        {children}
+      </Grid>
+    </>
+  );
 }
 
-export default Layout
+export default Layout;
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string,
+  children: PropTypes.element.isRequired,
+};
