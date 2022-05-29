@@ -36,11 +36,11 @@ GatsbyJS 命令行工具提供的 `gatsby new` 命令可以讓我們創建我們
 
 不少的開發者在 GatsbyJS 的社區提供了腳手架，方便開發。
 
-而官方提供了一個[最純淨的腳手架][4]
+而官方提供了一個 [最純淨的腳手架][4]
 
 ![gatsby-starter-hello-world][3]
 
-當然，你也可以用[我的腳手架][6]來搭建和我的博客一模一樣的網站。
+當然，你也可以用 [我的腳手架][6] 來搭建和我的博客一模一樣的網站。
 
 ![gatsby-starter-calpa-blog][5]
 
@@ -114,7 +114,7 @@ export default () => (
 
 ![About Page][13]
 
-```
+```jsx
 import React from "react"
 
 export default () => (
@@ -133,7 +133,7 @@ export default () => (
 
 首先把我們的 `src/pages/index.js` 改為以下代碼：
 
-```
+```jsx
 import React from "react"
 import { Link } from "gatsby"
 
@@ -158,7 +158,7 @@ export default () => (
 
 讓我們把 `/contact/` 改為 `/about/`：
 
-```
+```js
 import React from "react"
 import { Link } from "gatsby"
 
@@ -175,7 +175,7 @@ export default () => (
 
 你只需要使用 `build` 命令即可生成一個靜態網站文件夾。
 
-```
+```shell
 gatsby build
 ```
 
@@ -191,7 +191,7 @@ gatsby build
 
 ### 例子
 
-```
+```js
 export default function Component() {
   return (
     <div />
@@ -201,7 +201,7 @@ export default function Component() {
 
 上面的代碼會自動轉換為以下代碼。
 
-```
+```js
 import React from 'react';
 
 export default function Component() {
@@ -216,13 +216,13 @@ export default function Component() {
 
 - 先安裝 `babel-plugin-react-require`
 
-```bash
+```shell
 npm install babel-plugin-react-require --save-dev
 ```
 
 - 將 `react-require` 加入到 `.babelrc` 的 `plugins`，記得把它放到 `transform-es2015-modules-commonjs` 之前，因為需要 `ECMAScript 6 Module` 來導入 React 模塊。
 
-```
+```json
 {
   "plugins": [
     "react-require"

@@ -9,7 +9,15 @@ const defaultPageTitle = 'Calpa\'s Blog';
 function Layout({ pageTitle = defaultPageTitle, children }) {
   return (
     <>
-      <Helmet title={pageTitle} />
+      <Helmet title={pageTitle}>
+        <script
+          async
+          defer
+          data-website-id="590ad9a5-cf24-46bc-9c7d-986c36ae15e5"
+          src="https://umami-production-6ad8.up.railway.app/umami.js"
+          data-domains="calpa.me"
+        />
+      </Helmet>
       <NavBar />
       <Grid
         container
