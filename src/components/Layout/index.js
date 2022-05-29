@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
-import NavBar from './NavBar';
+import NavBar from '../NavBar';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
@@ -14,9 +14,9 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
       <Grid
         container
         xs={12}
-        style={{
+        sx={{
           backgroundColor: '#f4f4f4',
-          height: '100vh',
+          // minHeight: '100vh',
         }}
       >
         {children}
@@ -28,6 +28,6 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
 export default Layout;
 
 Layout.propTypes = {
-  pageTitle: PropTypes.string,
+  pageTitle: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
 };

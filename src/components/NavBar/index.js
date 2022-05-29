@@ -1,18 +1,16 @@
 import React from 'react';
 import {
-  AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem,
+  AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Tooltip, MenuItem,
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'gatsby';
 
+const blogLink = '/blog/1/';
+
 const pages = [{
   name: 'Guest Book',
   url: '/guest-book',
-},
-{
-  name: 'Tags',
-  url: '/tags',
 }, {
   name: 'About',
   url: '/about',
@@ -42,22 +40,25 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" color="background">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/">
+          <Link
+            to={blogLink}
+            style={{
+              textDecoration: 'none',
+            }}
+          >
             <Typography
               variant="h6"
               noWrap
-              component="a"
+              color="black"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
               }}
             >
               BLOG
@@ -95,15 +96,25 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                  <Link to={page.url}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                  <Link
+                    to={page.url}
+                    style={{
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <Typography textAlign="center" color="#337ab7">{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-          <Link to="/">
+          <Link
+            to={blogLink}
+            style={{
+              textDecoration: 'none',
+            }}
+          >
             <Typography
               variant="h5"
               noWrap
@@ -114,9 +125,9 @@ function NavBar() {
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+
               }}
+              color="#337ab7"
             >
               BLOG
             </Typography>
@@ -126,8 +137,36 @@ function NavBar() {
               <Link
                 key={page.url}
                 to={page.url}
+                style={{
+                  textDecoration: 'none',
+                }}
               >
-                <Typography sx={{ my: 2, color: 'white', display: 'block' }}>
+                <Typography
+                  sx={{
+                    my: 2,
+                    display: 'block',
+                    marginRight: '10px',
+                    transition: 'all .15s ease-in-out',
+                    ':hover': {
+                      color: '#0056b3',
+                      textDecoration: 'none',
+                      backgroundColor: 'transparent',
+                      ':after': {
+                        width: '100%',
+                      },
+                    },
+                    ':after': {
+                      background: 'none repeat scroll 0 0 transparent',
+                      width: '0',
+                      content: '""',
+                      display: 'block',
+                      height: '0.1rem',
+                      backgroundColor: '#0f457f',
+                      transition: 'width .4s ease 0s',
+                    },
+                  }}
+                  color="#337ab7"
+                >
                   {page.name}
                 </Typography>
               </Link>
@@ -158,7 +197,7 @@ function NavBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center" color="#337ab7">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
