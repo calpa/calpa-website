@@ -1,17 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Grid, Typography } from '@mui/material';
-import MuiMarkdown from 'mui-markdown';
+
+import loadable from '@loadable/component';
 
 import Layout from '../../components/Layout';
 
 import './blog.css';
+
+const MuiMarkdown = loadable(() => import('mui-markdown'));
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, rawMarkdownBody } = markdownRemark;
+
   return (
     <Layout>
       <Grid container>
