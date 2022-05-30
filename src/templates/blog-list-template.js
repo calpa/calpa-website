@@ -16,13 +16,23 @@ function BlogPage(props) {
 
   return (
     <Layout>
-      <Grid container item xs={6}>
+      <Grid
+        container
+        item
+        justifyContent="center"
+        sx={{
+          marginTop: '10px',
+          marginLeft: '10px',
+          marginRight: '10px',
+        }}
+      >
         {nodes.map(({ frontmatter }) => (
           <Grid
             container
             flexDirection="column"
             item
-            xs={12}
+            xs={11}
+            // sm={7}
           >
             <Card
               sx={{
@@ -58,8 +68,11 @@ function BlogPage(props) {
                       {frontmatter.title}
                     </Typography>
                   </Grid>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography color="text.secondary">
                     {frontmatter.description}
+                  </Typography>
+                  <Typography color="primary">
+                    More...
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -68,15 +81,34 @@ function BlogPage(props) {
         ))}
       </Grid>
 
-      <Grid container item xs={12}>
+      <Grid
+        container
+        item
+        xs={7}
+        justifyContent="space-between"
+        sx={{
+          margin: '0 auto',
+          paddingLeft: '5px',
+          paddingRight: '5px',
+        }}
+      >
+
+        <Button
+          variant="outlined"
+          disabled={currentPage === 1}
+          onClick={() => navigate(`/blog/${currentPage - 1}`)}
+        >
+          Previous
+        </Button>
+
         <Link
           to={`/blog/${currentPage + 1}`}
           style={{
             textDecoration: 'none',
           }}
         >
-          <Button variant="contained">
-            Next Page
+          <Button variant="outlined">
+            Next
           </Button>
         </Link>
       </Grid>

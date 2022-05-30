@@ -9,11 +9,8 @@ import { Link } from 'gatsby';
 const blogLink = '/blog/1/';
 
 const pages = [{
-  name: 'Guest Book',
-  url: '/guest-book',
-}, {
   name: 'About',
-  url: '/about',
+  url: '/blog/about/',
 }];
 const settings = ['Github'];
 
@@ -40,7 +37,16 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="sticky" color="background">
+    <AppBar
+      position="sticky"
+      color="background"
+      elevation="0"
+      sx={{
+        boxShadow: '0 0 10px rgb(14 14 14 / 26%)',
+        transition: 'background .5s',
+        padding: '0.5rem 1.5rem',
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link

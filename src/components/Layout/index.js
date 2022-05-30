@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
+
+// components
 import NavBar from '../NavBar';
+import Footer from '../Footer';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
@@ -28,6 +31,8 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
         }}
       >
         {children}
+
+        <Footer />
       </Grid>
     </>
   );

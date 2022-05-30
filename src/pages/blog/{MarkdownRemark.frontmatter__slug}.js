@@ -18,11 +18,19 @@ export default function Template({
 
   return (
     <Layout>
-      <Grid container>
+      <Grid
+        container
+        justifyContent="center"
+        sx={{
+          paddingTop: '20px',
+        }}
+      >
         <Grid
           container
+          item
+          xs={10}
           sx={{
-            padding: '10px',
+            padding: '20px',
             background: 'white',
             img: {
               maxWidth: '100%',
@@ -30,9 +38,9 @@ export default function Template({
             },
           }}
         >
-          <Grid container item xs={12}>
-            <Typography variant="h1">{frontmatter.title}</Typography>
-            <Typography variant="h2">{frontmatter.date}</Typography>
+          <Grid container alignItems="baseline" justifyContent="space-between">
+            <Typography variant="h1" fullWidth>{frontmatter.title}</Typography>
+            <Typography paragraph>{frontmatter.date}</Typography>
           </Grid>
           <MuiMarkdown>
             {rawMarkdownBody}

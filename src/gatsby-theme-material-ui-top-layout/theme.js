@@ -7,21 +7,21 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontSize: 12,
+    fontSize: 16,
     h1: {
-      fontSize: 22,
+      fontSize: 24,
     },
     h2: {
-      fontSize: 20,
+      fontSize: 22,
     },
     h3: {
-      fontSize: 18,
+      fontSize: 20,
     },
     h4: {
-      fontSize: 16,
+      fontSize: 18,
     },
     h5: {
-      fontSize: 14,
+      fontSize: 16,
     },
   },
 });
