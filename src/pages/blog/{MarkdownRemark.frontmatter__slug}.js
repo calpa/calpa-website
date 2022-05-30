@@ -40,7 +40,11 @@ export default function Template({
           }}
         >
           <Grid container alignItems="baseline" justifyContent="space-between">
-            <Typography variant="h1" fullWidth>{frontmatter.title}</Typography>
+            <Typography variant="h1" fullWidth>
+              {frontmatter.title}
+              {' '}
+              - By Calpa Liu
+            </Typography>
             <Typography paragraph>{frontmatter.date}</Typography>
           </Grid>
           <Grid
