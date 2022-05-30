@@ -12,9 +12,7 @@ function Footer() {
   return (
     <Grid
       container
-      sx={{
-        padding: '10px',
-      }}
+      justifyContent="center"
     >
       <Divider sx={{
         width: '100%',
@@ -25,7 +23,6 @@ function Footer() {
 
       <Grid
         container
-        flexDirection="row"
         item
         xs={10}
       >
@@ -48,15 +45,17 @@ function Footer() {
         <Link href="https://www.netlify.com/">Netlify</Link>
         <Typography>.</Typography>
       </Grid>
-      <Typography>
-        The code is open source and available at&nbsp;
-      </Typography>
-      <Link
-        href="https://github.com/calpa/calpa-website"
-      >
-        calpa-website
-      </Link>
-      <Grid container>
+      <Grid container xs={10}>
+        <Typography>
+          The code is open source and available at&nbsp;
+        </Typography>
+        <Link
+          href="https://github.com/calpa/calpa-website"
+        >
+          calpa-website
+        </Link>
+      </Grid>
+      <Grid container xs={10}>
         <Typography>
           Copyright&nbsp;
         </Typography>

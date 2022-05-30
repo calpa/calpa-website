@@ -6,12 +6,22 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'gatsby';
 
-const blogLink = '/blog/1/';
+const rootUrl = '/';
 
-const pages = [{
-  name: 'About',
-  url: '/blog/about/',
-}];
+const pages = [
+  {
+    name: 'Blog',
+    url: '/blog/1/',
+  },
+  {
+    name: 'Guest Book',
+    url: '/blog/guestbook/',
+  },
+  {
+    name: 'About',
+    url: '/blog/about/',
+  },
+];
 const settings = ['Github'];
 
 const avatarImageSrc = 'https://avatars.githubusercontent.com/u/19569045?v=4';
@@ -50,7 +60,7 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link
-            to={blogLink}
+            to={rootUrl}
             style={{
               textDecoration: 'none',
             }}
@@ -67,7 +77,7 @@ function NavBar() {
                 letterSpacing: '.3rem',
               }}
             >
-              BLOG
+              HOME
             </Typography>
           </Link>
 
@@ -116,7 +126,7 @@ function NavBar() {
           </Box>
 
           <Link
-            to={blogLink}
+            to={rootUrl}
             style={{
               textDecoration: 'none',
             }}
@@ -135,7 +145,7 @@ function NavBar() {
               }}
               color="#337ab7"
             >
-              BLOG
+              HOME
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
