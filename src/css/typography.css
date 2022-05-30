@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Iansui";
+  src: url("../fonts/Iansui094-Regular.ttf");
+}
+
+body {
+  font-family: "Iansui", Georgia, 'Times New Roman', Times, serif;
+}

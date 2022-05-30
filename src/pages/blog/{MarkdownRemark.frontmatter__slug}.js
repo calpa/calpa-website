@@ -9,6 +9,7 @@ import Layout from '../../components/Layout';
 import './blog.css';
 
 const MuiMarkdown = loadable(() => import('mui-markdown'));
+const Waline = loadable(() => import('../../components/Waline'));
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -42,9 +43,18 @@ export default function Template({
             <Typography variant="h1" fullWidth>{frontmatter.title}</Typography>
             <Typography paragraph>{frontmatter.date}</Typography>
           </Grid>
-          <MuiMarkdown>
-            {rawMarkdownBody}
-          </MuiMarkdown>
+          <Grid
+            container
+            flexDirection="column"
+          >
+            <MuiMarkdown options={{
+              wrapper: React.Fragment,
+            }}
+            >
+              {rawMarkdownBody}
+            </MuiMarkdown>
+          </Grid>
+          <Waline />
         </Grid>
       </Grid>
     </Layout>

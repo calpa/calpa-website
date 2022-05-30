@@ -8,6 +8,7 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 16,
+    fontFamily: 'Iansui',
     h1: {
       fontSize: 24,
     },

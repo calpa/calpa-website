@@ -41,7 +41,7 @@ function BlogPage(props) {
               onClick={() => navigate(`/blog${frontmatter.slug[0] !== '/' ? '/' : ''}${frontmatter.slug}`)}
             >
               <CardActionArea>
-                {frontmatter.headerImage
+                {/* {frontmatter.headerImage
                 && (
                 <CardMedia
                   component="img"
@@ -49,7 +49,7 @@ function BlogPage(props) {
                   alt="image"
                   src={frontmatter.headerImage}
                 />
-                )}
+                )} */}
                 <CardContent>
                   <Grid container alignItems="center">
                     <Typography sx={{

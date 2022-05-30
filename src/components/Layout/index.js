@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet';
 import NavBar from '../NavBar';
 import Footer from '../Footer';
 
+import '../../css/typography.css';
+
 const defaultPageTitle = 'Calpa\'s Blog';
 
 function Layout({ pageTitle = defaultPageTitle, children }) {
@@ -19,6 +21,10 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
           data-website-id="590ad9a5-cf24-46bc-9c7d-986c36ae15e5"
           src="https://umami-production-6ad8.up.railway.app/umami.js"
           data-domains="calpa.me"
+        />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/@waline/client@v2/dist/waline.css"
         />
       </Helmet>
       <NavBar />
