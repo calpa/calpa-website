@@ -7,6 +7,7 @@ import loadable from '@loadable/component';
 import Layout from '../../components/Layout';
 
 import './blog.css';
+import { Helmet } from 'react-helmet';
 
 const MuiMarkdown = loadable(() => import('mui-markdown'));
 const Waline = loadable(() => import('../../components/Waline'));
@@ -19,6 +20,10 @@ export default function Template({
 
   return (
     <Layout>
+      <Helmet>
+        <title>{frontmatter.title}</title>
+      </Helmet>
+
       <Grid
         container
         justifyContent="center"

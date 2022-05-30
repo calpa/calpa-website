@@ -14,7 +14,10 @@ const defaultPageTitle = 'Calpa\'s Blog';
 function Layout({ pageTitle = defaultPageTitle, children }) {
   return (
     <>
-      <Helmet title={pageTitle}>
+      <Helmet
+        defaultTitle="Calpa's Website"
+        titleTemplate={'%s | Calpa\'s Website'}
+      >
         <script
           async
           defer
