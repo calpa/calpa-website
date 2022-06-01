@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, navigate, Link } from 'gatsby';
 import {
-  Grid, Typography, Card, CardContent, CardMedia,
+  Grid, Typography, Card, CardContent,
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import Date from '../components/Date';
 
 function BlogPage(props) {
   const { data, pageContext } = props;
@@ -21,17 +23,17 @@ function BlogPage(props) {
         item
         justifyContent="center"
         sx={{
-          marginTop: '10px',
+          marginTop: '20px',
           marginLeft: '10px',
           marginRight: '10px',
         }}
+        xs
       >
         {nodes.map(({ frontmatter }) => (
           <Grid
             container
             flexDirection="column"
             item
-            xs={11}
             // sm={7}
           >
             <Card
@@ -41,34 +43,20 @@ function BlogPage(props) {
               onClick={() => navigate(`/blog${frontmatter.slug[0] !== '/' ? '/' : ''}${frontmatter.slug}`)}
             >
               <CardActionArea>
-                {/* {frontmatter.headerImage
-                && (
-                <CardMedia
-                  component="img"
-                  height="140"
-                  alt="image"
-                  src={frontmatter.headerImage}
-                />
-                )} */}
                 <CardContent>
-                  <Grid container alignItems="center">
-                    <Typography sx={{
-                      backgroundColor: '#77d7b9',
-                      color: '#fff',
-                      padding: '0.8em',
-                      marginRight: '10px',
-                    }}
-                    >
-                      {frontmatter.date.split('T')[0]}
-                    </Typography>
-                    <Typography sx={{
-                      textDecoration: 'none',
-                    }}
+                  <Grid container alignItems="center" justifyContent="space-between">
+                    <Typography
+                      variant="h1"
+                      fullWidth
+                      sx={{
+                        textDecoration: 'none',
+                      }}
                     >
                       {frontmatter.title}
                     </Typography>
+                    <Date date={frontmatter.date} />
                   </Grid>
-                  <Typography color="text.secondary">
+                  <Typography>
                     {frontmatter.description}
                   </Typography>
                   <Typography color="primary">
@@ -81,15 +69,19 @@ function BlogPage(props) {
         ))}
       </Grid>
 
+      <Sidebar />
+
       <Grid
         container
         item
-        xs={7}
-        justifyContent="space-between"
+        xs={12}
+        justifyContent="space-around"
         sx={{
-          margin: '0 auto',
-          paddingLeft: '5px',
-          paddingRight: '5px',
+          marginTop: '10px',
+          marginBottom: '10px',
+          // margin: '0 auto',
+          // paddingLeft: '8px',
+          // paddingRight: '5px',
         }}
       >
 
@@ -159,7 +151,7 @@ query blogListQuery($skip: Int!, $limit: Int!) {
       frontmatter {
         title
         slug
-        date
+        date(formatString: "DD/MM/YYYY")
         headerImage
         description
       }

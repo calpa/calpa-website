@@ -1,11 +1,18 @@
 import { createTheme } from '@mui/material';
 
-const theme = createTheme({
-  palette: {
-    background: {
-      main: '#f8f8f8',
-    },
+export const palette = {
+  background: {
+    main: '#f8f8f8',
   },
+  blue: {
+    light: '#337ab7',
+    main: '#0056b3',
+    dark: '#0f457f',
+  },
+};
+
+const theme = createTheme({
+  palette,
   typography: {
     fontSize: 16,
     fontFamily: 'Iansui',

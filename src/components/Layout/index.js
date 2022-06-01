@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
 // components
@@ -32,15 +32,21 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
       </Helmet>
       <NavBar />
       <Grid
-        container
-        xs={12}
         sx={{
           backgroundColor: '#f4f4f4',
-          // minHeight: '100vh',
         }}
       >
-        {children}
-
+        <Grid
+          container
+          item
+          sx={{
+            margin: '0 auto',
+            maxWidth: 'md',
+            justifyContent: 'center',
+          }}
+        >
+          {children}
+        </Grid>
         <Footer />
       </Grid>
     </>

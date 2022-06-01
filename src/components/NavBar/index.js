@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Tooltip, MenuItem,
+  AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Tooltip, MenuItem, Grid,
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -148,7 +148,11 @@ function NavBar() {
               HOME
             </Typography>
           </Link>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Grid
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+            justifyContent="flex-end"
+            alignSelf="flex-end"
+          >
             {pages.map((page) => (
               <Link
                 key={page.url}
@@ -187,37 +191,7 @@ function NavBar() {
                 </Typography>
               </Link>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt={avatarAlt} src={avatarImageSrc} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" color="#337ab7">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          </Grid>
         </Toolbar>
       </Container>
     </AppBar>

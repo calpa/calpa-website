@@ -1,6 +1,6 @@
 ---
 slug: /about/
-title: About Calpa Liu
+title: About
 date: 2022-05-29T00:00:00.000Z
 ---
 ### Hello World, I am [Calpa](https://calpa.me)!

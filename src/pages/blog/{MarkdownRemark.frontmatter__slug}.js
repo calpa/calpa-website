@@ -1,13 +1,16 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Grid, Typography } from '@mui/material';
-
+import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
 
+import { Button } from 'gatsby-theme-material-ui';
 import Layout from '../../components/Layout';
+import Sidebar from '../../components/Sidebar';
 
 import './blog.css';
-import { Helmet } from 'react-helmet';
+import { palette } from '../../gatsby-theme-material-ui-top-layout/theme';
+import Date from '../../components/Date';
 
 const MuiMarkdown = loadable(() => import('mui-markdown'));
 const Waline = loadable(() => import('../../components/Waline'));
@@ -26,46 +29,53 @@ export default function Template({
 
       <Grid
         container
-        justifyContent="center"
+        item
+        xs
+        // justifyContent="center"
         sx={{
-          paddingTop: '20px',
+          marginTop: '20px',
+          marginLeft: '10px',
+          marginRight: '10px',
+          paddingTop: '16px',
+          paddingLeft: '16px',
+          paddingRight: '16px',
+          background: 'white',
+          img: {
+            maxWidth: '100%',
+            objectFit: 'scale-down',
+          },
         }}
       >
+        <Grid container alignItems="center" justifyContent="space-between">
+          <Typography variant="h1" fullWidth>
+            {frontmatter.title}
+            {/* - By
+            <Link
+              to="/blog/about/"
+              style={{
+                color: palette.blue.main,
+                textDecoration: 'none',
+              }}
+            >
+              Calpa Liu
+            </Link> */}
+          </Typography>
+          <Date date={frontmatter.date.split('T')[0]} />
+        </Grid>
         <Grid
           container
-          item
-          xs={10}
-          sx={{
-            padding: '20px',
-            background: 'white',
-            img: {
-              maxWidth: '100%',
-              objectFit: 'scale-down',
-            },
-          }}
+          flexDirection="column"
         >
-          <Grid container alignItems="baseline" justifyContent="space-between">
-            <Typography variant="h1" fullWidth>
-              {frontmatter.title}
-              {' '}
-              - By Calpa Liu
-            </Typography>
-            <Typography paragraph>{frontmatter.date}</Typography>
-          </Grid>
-          <Grid
-            container
-            flexDirection="column"
+          <MuiMarkdown options={{
+            wrapper: React.Fragment,
+          }}
           >
-            <MuiMarkdown options={{
-              wrapper: React.Fragment,
-            }}
-            >
-              {rawMarkdownBody}
-            </MuiMarkdown>
-          </Grid>
-          <Waline />
+            {rawMarkdownBody}
+          </MuiMarkdown>
         </Grid>
+        <Waline />
       </Grid>
+      <Sidebar />
     </Layout>
   );
 }
@@ -75,7 +85,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       # html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YYYY")
         slug
         title
       }
