@@ -9,7 +9,7 @@ function Waline(props) {
     walineInstanceRef.current = init({
       ...props,
       el: containerRef.current,
-      serverURL: 'https://railway-starter-production-a405.up.railway.app/',
+      serverURL: 'https://emmkg8.deta.dev/',
       lang: 'en',
       path: window?.location.pathname.replace(/\/$/, ''),
     });
