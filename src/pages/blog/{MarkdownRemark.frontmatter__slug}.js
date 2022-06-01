@@ -1,15 +1,13 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Grid, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
 
-import { Button } from 'gatsby-theme-material-ui';
 import Layout from '../../components/Layout';
 import Sidebar from '../../components/Sidebar';
 
 import './blog.css';
-import { palette } from '../../gatsby-theme-material-ui-top-layout/theme';
 import Date from '../../components/Date';
 
 const MuiMarkdown = loadable(() => import('mui-markdown'));
