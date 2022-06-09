@@ -2,7 +2,7 @@ const path = require('path');
 // const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   const result = await graphql(
     `
@@ -32,6 +32,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create blog-list pages
   const posts = result.data.allMarkdownRemark.edges;
+
+  posts.forEach((post) => {
+    const obj = {
+      fromPath: post.node.frontmatter.slug,
+      toPath: `/blog${post.node.frontmatter.slug}`,
+      isPermanent: true,
+    };
+
+    createRedirect(obj);
+  });
+
   const postsPerPage = 10;
   const numPages = Math.ceil(posts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
