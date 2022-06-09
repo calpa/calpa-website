@@ -91,6 +91,7 @@ function Sidebar(props) {
             style={{
               textDecoration: 'none',
               color: palette.blue.main,
+              width: '100%',
             }}
           >
             {node.frontmatter.title}

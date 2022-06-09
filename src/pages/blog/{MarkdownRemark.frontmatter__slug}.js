@@ -10,14 +10,14 @@ import Sidebar from '../../components/Sidebar';
 import './blog.css';
 import Date from '../../components/Date';
 
-const MuiMarkdown = loadable(() => import('mui-markdown'));
+const MuiMarkdown = loadable(() => import('../../components/Markdown'));
 const Waline = loadable(() => import('../../components/Waline'));
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, rawMarkdownBody } = markdownRemark;
 
   return (
     <Layout>
@@ -52,10 +52,7 @@ export default function Template({
           </Typography>
           <Date date={frontmatter.date.split('T')[0]} />
         </Grid>
-        <div
-          // flexDirection="row"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MuiMarkdown>{rawMarkdownBody}</MuiMarkdown>
         <Waline />
       </Grid>
       <Sidebar />
@@ -72,7 +69,7 @@ export const pageQuery = graphql`
         slug
         title
       }
-      html
+      rawMarkdownBody
     }
   }
 `;
