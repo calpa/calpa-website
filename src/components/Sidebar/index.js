@@ -86,7 +86,7 @@ function Sidebar(props) {
         </Typography>
         {latestPosts.map(({ node }) => (
           <Link
-            to={`/blog/${node.frontmatter.slug}`}
+            to={`/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`}
             key={node.frontmatter.slug}
             style={{
               textDecoration: 'none',

@@ -17,7 +17,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, rawMarkdownBody } = markdownRemark;
+  const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout>
@@ -28,7 +28,7 @@ export default function Template({
       <Grid
         container
         item
-        xs
+        xs={8}
         // justifyContent="center"
         sx={{
           marginTop: '20px',
@@ -45,32 +45,17 @@ export default function Template({
         }}
       >
         <Grid container alignItems="center" justifyContent="space-between">
-          <Typography variant="h1" fullWidth>
+          <Typography
+            variant="h1"
+          >
             {frontmatter.title}
-            {/* - By
-            <Link
-              to="/blog/about/"
-              style={{
-                color: palette.blue.main,
-                textDecoration: 'none',
-              }}
-            >
-              Calpa Liu
-            </Link> */}
           </Typography>
           <Date date={frontmatter.date.split('T')[0]} />
         </Grid>
-        <Grid
-          container
-          flexDirection="column"
-        >
-          <MuiMarkdown options={{
-            wrapper: React.Fragment,
-          }}
-          >
-            {rawMarkdownBody}
-          </MuiMarkdown>
-        </Grid>
+        <div
+          // flexDirection="row"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         <Waline />
       </Grid>
       <Sidebar />
@@ -87,7 +72,7 @@ export const pageQuery = graphql`
         slug
         title
       }
-      rawMarkdownBody
+      html
     }
   }
 `;

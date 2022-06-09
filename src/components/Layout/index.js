@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
 // components
@@ -11,12 +11,12 @@ import '../../css/typography.css';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
-function Layout({ pageTitle = defaultPageTitle, children }) {
+function Layout({ children }) {
   return (
     <>
       <Helmet
         defaultTitle="Calpa's Website"
-        titleTemplate={'%s | Calpa\'s Website'}
+        titleTemplate={`%s | ${defaultPageTitle}`}
       >
         <script
           async
@@ -41,7 +41,7 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
           item
           sx={{
             margin: '0 auto',
-            maxWidth: 'md',
+            maxWidth: 'lg',
             justifyContent: 'center',
           }}
         >
@@ -56,6 +56,5 @@ function Layout({ pageTitle = defaultPageTitle, children }) {
 export default Layout;
 
 Layout.propTypes = {
-  pageTitle: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
 };
