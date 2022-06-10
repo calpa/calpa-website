@@ -34,9 +34,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.allMarkdownRemark.edges;
 
   posts.forEach((post) => {
+    const { node } = post;
     const obj = {
-      fromPath: post.node.frontmatter.slug,
-      toPath: `/blog${post.node.frontmatter.slug}`,
+      fromPath: node.frontmatter.slug,
+      toPath: `/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`,
       isPermanent: true,
     };
 
