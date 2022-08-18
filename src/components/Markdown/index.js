@@ -3,6 +3,8 @@ import ReactMarkdown from 'markdown-to-jsx';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
+import Code from '../Code';
+
 const options = {
   overrides: {
     h1: {
@@ -19,9 +21,12 @@ const options = {
     },
     p: { component: Typography, props: { paragraph: true } },
     a: { component: Link },
+    code: {
+      component: Code,
+    },
   },
 };
 
-export default function Markdown(props) {
+export default function Markdown (props) {
   return <ReactMarkdown options={options} {...props} />;
 }
