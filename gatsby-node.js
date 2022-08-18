@@ -1,4 +1,5 @@
 const path = require('path');
+const { get } = require('lodash');
 // const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -37,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const { node } = post;
     const obj = {
       fromPath: node.frontmatter.slug,
-      toPath: `/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`,
+      toPath: `/blog${get(node, 'frontmatter.slug[0]') === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`,
       isPermanent: true,
     };
 

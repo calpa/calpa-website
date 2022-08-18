@@ -13,7 +13,7 @@ import Date from '../../components/Date';
 const MuiMarkdown = loadable(() => import('../../components/Markdown'));
 const Waline = loadable(() => import('../../components/Waline'));
 
-export default function Template({
+export default function Template ({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -45,12 +45,16 @@ export default function Template({
         }}
       >
         <Grid container alignItems="center" justifyContent="space-between">
-          <Typography
-            variant="h1"
-          >
-            {frontmatter.title}
-          </Typography>
-          <Date date={frontmatter.date.split('T')[0]} />
+          <Grid xs>
+            <Typography
+              variant="h1"
+            >
+              {frontmatter.title}
+            </Typography>
+          </Grid>
+          <Grid xs={2}>
+            <Date date={frontmatter.date.split('T')[0]} />
+          </Grid>
         </Grid>
         <MuiMarkdown>{rawMarkdownBody}</MuiMarkdown>
         <Waline />
