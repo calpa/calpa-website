@@ -42,6 +42,8 @@ services:
       - $HOME/neo4j/logs:/logs
       - $HOME/neo4j/import:/var/lib/neo4j/import
       - $HOME/neo4j/plugins:/plugins
+    environment:
+      - NEO4J_AUTH=neo4j/test
 ```
 
 We can also starts the neo4j service by using the following command:
@@ -60,7 +62,7 @@ docker-compose up -d
 
 You may also change the location of the database to current folder by changing the volume.
 
-```bash
+```yml
 version: '3'
 
 services:
@@ -75,11 +77,40 @@ services:
       - ./neo4j/logs:/logs
       - ./neo4j/import:/var/lib/neo4j/import
       - ./neo4j/plugins:/plugins
+    environment:
+      - NEO4J_AUTH=neo4j/test
 ```
 
-## Result
+## Neo4j Browser
+
+We can run the following cypher query in http://localhost:7474/browser/ to check if we have an empty database.
+
+```cypher
+MATCH (m)
+RETURN m
+```
 
 ![](https://i.imgur.com/W12bQaP.png)
+
+To create a node, we can use the following cypher query:
+
+```cypher
+CREATE (n:Node)
+RETURN n
+```
+
+And one node is created.
+
+![](https://i.imgur.com/tWb4adF.png)
+
+Now when we query all nodes, we can see the same result.
+
+```cypher
+MATCH (m)
+RETURN m
+```
+
+![](https://i.imgur.com/h6ptpLM.png)
 
 ## Reference
 1. [How-To: Run Neo4j in Docker](https://neo4j.com/developer/docker-run-neo4j/)
