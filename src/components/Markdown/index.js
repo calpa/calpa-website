@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
-import Typography from '@mui/material/Typography';
+import { Typography, Grid } from '@mui/material';
 import Link from '@mui/material/Link';
 
 import Code from '../Code';
+
+function Wrapper ({ children }) {
+  return (
+    <Grid
+      sx={{
+        width: '100%',
+      }}
+    >
+      {children}
+    </Grid>
+  );
+}
 
 const options = {
   overrides: {
@@ -25,6 +37,7 @@ const options = {
       component: Code,
     },
   },
+  wrapper: Wrapper,
 };
 
 export default function Markdown (props) {
