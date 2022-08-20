@@ -11,7 +11,7 @@ const avatarAlt = 'Calpa Liu';
 
 const width = 120;
 
-function Sidebar(props) {
+function Sidebar (props) {
   const data = useStaticQuery(graphql`
   {
     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 10) {
@@ -61,7 +61,7 @@ function Sidebar(props) {
         to="/blog/about/"
         style={{
           textDecoration: 'none',
-          color: palette.blue.main,
+          color: palette.blue.dark,
         }}
       >
         <Typography variant="h2">
@@ -84,17 +84,17 @@ function Sidebar(props) {
         <Typography variant="h3">
           Recent Posts
         </Typography>
-        {latestPosts.map(({ node }) => (
+        {latestPosts.map(({ node }, index) => (
           <Link
             to={`/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`}
             key={node.frontmatter.slug}
             style={{
               textDecoration: 'none',
-              color: palette.blue.main,
+              color: palette.blue.dark,
               width: '100%',
             }}
           >
-            {node.frontmatter.title}
+            {index + 1}. {node.frontmatter.title}
           </Link>
         ))}
       </Grid>
