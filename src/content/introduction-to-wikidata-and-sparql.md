@@ -1,8 +1,10 @@
 ---
 slug: introduction-to-wikidata-and-sparql
-date: 2022-09-05T00:00:00.000Z
+date: 2022-09-06T00:00:00.000Z
 title: Introduction to Wikidata and SPARQL
 ---
+
+![](https://i.imgur.com/L7H6R6K.png)
 
 Wikidata is a free multilingual database that available for everyone to query information from wikipedia. We can use it to get the statistics, dates, locations that stored in the wikipedia.
 
@@ -41,7 +43,7 @@ WHERE {
 Select variables `item` and `itemLabel` that the record is `instance of`(P31) `country`(Q6256).
 
 And we can translate the label in english by this:
-```
+```SPARQL
 SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
 ```
 
