@@ -5,26 +5,22 @@ import { Helmet } from 'react-helmet';
 
 // components
 import NavBar from '../NavBar';
-import Footer from '../Footer';
+// import Footer from '../Footer';
+import UI from '@calpa/ui'
+
+const { Footer } = UI;
 
 import '../../css/typography.css';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
-function Layout({ children }) {
+function Layout ({ children }) {
   return (
     <>
       <Helmet
         defaultTitle="Calpa's Website"
         titleTemplate={`%s | ${defaultPageTitle}`}
       >
-        <script
-          async
-          defer
-          data-website-id="590ad9a5-cf24-46bc-9c7d-986c36ae15e5"
-          src="https://umami-production-6ad8.up.railway.app/umami.js"
-          data-domains="calpa.me"
-        />
         <link
           rel="stylesheet"
           href="https://unpkg.com/@waline/client@v2/dist/waline.css"
@@ -47,7 +43,16 @@ function Layout({ children }) {
         >
           {children}
         </Grid>
-        <Footer />
+        <Footer
+          about="Build With Love and Peace"
+          categories={[]}
+          quickLinks={[
+            {
+              title: "Github Page",
+              link: `https://github.com/calpa/`
+            }
+          ]}
+        />
       </Grid>
     </>
   );

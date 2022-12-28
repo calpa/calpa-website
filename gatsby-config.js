@@ -22,6 +22,14 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          `G-7JZ70YDETC`
+        ]
+      }
+    },
     'gatsby-plugin-pnpm',
     'gatsby-transformer-remark',
     'gatsby-theme-material-ui',

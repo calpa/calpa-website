@@ -22,6 +22,7 @@ specifiers:
   eslint-plugin-react: ^7.30.0
   eslint-plugin-react-hooks: ^4.5.0
   gatsby: ^4.15.0
+  gatsby-plugin-google-gtag: ^5.3.0
   gatsby-plugin-image: ^2.15.0
   gatsby-plugin-manifest: ^4.15.0
   gatsby-plugin-mdx: ^3.15.0
@@ -60,6 +61,7 @@ dependencies:
   '@waline/client': 2.14.4
   cross-env: 7.0.3
   gatsby: 4.25.1_sfoxds7t5ydpegc3knd667wn6m
+  gatsby-plugin-google-gtag: 5.3.0_fpekz6f2fmeogzscxle4pqi53e
   gatsby-plugin-image: 2.25.0_yv5wfjgmy22oxeam5kgvhzit7y
   gatsby-plugin-manifest: 4.25.0_gatsby@4.25.1
   gatsby-plugin-mdx: 3.20.0_4mzttxfee2kmqbqkqulof5nh74
@@ -9711,6 +9713,21 @@ packages:
       '@babel/runtime': 7.20.7
       gatsby: 4.25.1_sfoxds7t5ydpegc3knd667wn6m
       regex-escape: 3.4.10
+    dev: false
+
+  /gatsby-plugin-google-gtag/5.3.0_fpekz6f2fmeogzscxle4pqi53e:
+    resolution: {integrity: sha512-anLuBM/tVhRZzrNqhOM0FnKiiAZzJYukl5XjaedWrgfNf5agRw1ZmYmiKsT4SIoo6MQmm8w0VZMuksQIEGS07w==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+      react: ^18.0.0 || ^0.0.0
+      react-dom: ^18.0.0 || ^0.0.0
+    dependencies:
+      '@babel/runtime': 7.20.7
+      gatsby: 4.25.1_sfoxds7t5ydpegc3knd667wn6m
+      minimatch: 3.1.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /gatsby-plugin-image/2.25.0_yv5wfjgmy22oxeam5kgvhzit7y:

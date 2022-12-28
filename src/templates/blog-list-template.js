@@ -5,11 +5,17 @@ import {
   Grid, Typography, Card, CardContent,
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
+
+import UI from '@calpa/ui'
+
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Date from '../components/Date';
+// import Tag from '@calpa/ui/dist/Tag';
 
-function BlogPage(props) {
+const { Tag } = UI;
+
+function BlogPage (props) {
   const { data, pageContext } = props;
   const { allMarkdownRemark } = data;
   const { currentPage } = pageContext;
@@ -34,7 +40,7 @@ function BlogPage(props) {
             container
             flexDirection="column"
             item
-            // sm={7}
+          // sm={7}
           >
             <Card
               sx={{
@@ -59,9 +65,7 @@ function BlogPage(props) {
                   <Typography>
                     {frontmatter.description}
                   </Typography>
-                  <Typography color="primary">
-                    More...
-                  </Typography>
+                  <Tag tag="JavaScript">JavaScript</Tag>
                 </CardContent>
               </CardActionArea>
             </Card>
