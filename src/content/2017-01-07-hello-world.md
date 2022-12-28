@@ -6,7 +6,7 @@ slug: /2017/01/07/hello-world/
 date: 2017-01-07T03:48:03.125Z
 description: Hello World
 tags:
-  - 閱讀
+  -  Readings
 ---
 
 # Hello World

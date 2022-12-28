@@ -6,7 +6,7 @@ slug: /2018/11/05/front-end-daily-improving-learning-list/
 date: 2018-11-05T03:48:03.125Z
 description: 學習如逆水行舟，不進則退。透過這個清單，我可以不斷學習前端知識，掌握更新的技能，天天進化。
 tags:
-  - 閱讀
+  -  Readings
   - 清單
   - 前端
   - JavaScript

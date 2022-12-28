@@ -6,7 +6,7 @@ slug: /2018/11/02/learn-javascript-npm-via-testing-driven-development/
 date: 2018-11-02T03:48:03.125Z
 description: 在程序員的日常精進之中，閱讀優秀的代碼是必不可少的。透過 TDD 的開發模式，可以模仿那些優秀的代碼，從而提升自己代碼水平。下面介紹如何從零開始搭建 TDD 環境，並構建 isEven 代碼。
 tags:
-  - 閱讀
+  -  Readings
   - JavaScript
 ---
 

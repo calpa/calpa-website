@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, navigate, Link } from 'gatsby';
 import {
-  Grid, Typography, Card, CardContent,
+  Grid, Typography, Card, CardContent, Pagination
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
-
+import { map } from 'lodash';
 import UI from '@calpa/ui'
 
 import Layout from '../components/Layout';
@@ -20,7 +20,9 @@ function BlogPage (props) {
   const { allMarkdownRemark } = data;
   const { currentPage } = pageContext;
 
-  const { nodes } = allMarkdownRemark;
+  const { nodes, totalCount } = allMarkdownRemark;
+
+  const count = Math.floor(totalCount / 10) + 1;
 
   return (
     <Layout>
@@ -65,7 +67,13 @@ function BlogPage (props) {
                   <Typography>
                     {frontmatter.description}
                   </Typography>
-                  <Tag tag="JavaScript">JavaScript</Tag>
+                  {map(frontmatter.tags, (tag, index) => (
+                    <Tag
+                      key={index}
+                      tag={tag}
+                    >{tag}</Tag>
+                  ))
+                  }
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -83,30 +91,13 @@ function BlogPage (props) {
         sx={{
           marginTop: '10px',
           marginBottom: '10px',
-          // margin: '0 auto',
-          // paddingLeft: '8px',
-          // paddingRight: '5px',
         }}
       >
 
-        <Button
-          variant="outlined"
-          disabled={currentPage === 1}
-          onClick={() => navigate(`/blog/${currentPage - 1}`)}
-        >
-          Previous
-        </Button>
-
-        <Link
-          to={`/blog/${currentPage + 1}`}
-          style={{
-            textDecoration: 'none',
-          }}
-        >
-          <Button variant="outlined">
-            Next
-          </Button>
-        </Link>
+        <Pagination count={count} page={currentPage}
+          onChange={(event, value) => navigate(`/blog/${value}`)}
+          color="primary"
+        />
       </Grid>
     </Layout>
   );
@@ -158,6 +149,7 @@ query blogListQuery($skip: Int!, $limit: Int!) {
         date(formatString: "DD/MM/YYYY")
         headerImage
         description
+        tags
       }
     }
   }

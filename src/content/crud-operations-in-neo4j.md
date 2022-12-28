@@ -2,6 +2,8 @@
 slug: crud-operations-in-neo4j
 date: 2022-08-18T00:00:00.000Z
 title: CRUD Operations in neo4j
+tags:
+    - neo4j
 ---
 
 ## Create

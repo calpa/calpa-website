@@ -7,7 +7,7 @@ date: 2017-05-01T03:48:03.125Z
 description: 如果你遇到 CreateListFromArrayLike 的報錯的話，那麼可以看看代碼裡面調用 apply 方法的地方，call 是用0個或者更多的參數，而 apply 則是用一個數組。
 tags:
     - JavaScript
-    - 閱讀
+    -  Readings
 ---
 
 如果你遇到 CreateListFromArrayLike 的報錯的話，那麼可以看看代碼裡面調用 apply 方法的地方，call 是用0個或者更多的參數，而 apply 則是用一個數組。

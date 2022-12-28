@@ -5,7 +5,7 @@ title: 從遊戲角度探討 Software Engineering 工作
 date: 2022-02-14T18:09:59.056Z
 description: 我越來越發現，要在 Software Engineering 這一行工作，就如同打遊戲一樣，大多時候都是說這些，天賦，技能樹，裝備，公會，隊友。
 tags:
-  - 閱讀
+  -  Readings
 headerImage: https://i.imgur.com/Bl8Wo7T.png
 templateKey: blog-post
 ---

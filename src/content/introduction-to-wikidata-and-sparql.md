@@ -2,6 +2,8 @@
 slug: introduction-to-wikidata-and-sparql
 date: 2022-09-06T00:00:00.000Z
 title: Introduction to Wikidata and SPARQL
+tags:
+  - SPARQL
 ---
 
 ![](https://i.imgur.com/L7H6R6K.png)

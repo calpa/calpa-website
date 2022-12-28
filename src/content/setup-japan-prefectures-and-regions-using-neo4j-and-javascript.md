@@ -2,6 +2,9 @@
 slug: setup-japan-prefectures-and-regions-using-neo4j-and-javascript
 date: 2022-08-19T00:00:00.000Z
 title: Setup Japan Prefectures and Regions using neo4j and JavaScript
+tags:
+  - neo4j
+  - JavaScript
 ---
 
 ![](https://i.imgur.com/M8RJBGn.png)

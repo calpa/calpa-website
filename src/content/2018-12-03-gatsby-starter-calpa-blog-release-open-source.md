@@ -6,7 +6,7 @@ slug: /2018/12/03/gatsby-starter-calpa-blog-release-open-source/
 date: 2018-12-03T03:48:03.125Z
 description: 感謝各位這些年來閱讀我的博客文章，以及優化博客系統框架，現在，我將為你帶來一個前後端徹底分離，而且可以一鍵啟動的博客框架。
 tags:
-  - 閱讀
+  -  Readings
 ---
 
 ## 前言

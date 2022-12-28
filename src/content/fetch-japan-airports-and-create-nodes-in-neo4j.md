@@ -2,6 +2,10 @@
 slug: fetch-japan-airports-and-create-nodes-in-neo4j
 date: 2022-08-22T00:00:00.000Z
 title: Fetch Japan Airports and create nodes in neo4j
+tags:
+  - neo4j
+  - cypher
+  - JavaScript
 ---
 
 I would like to know more about Japan, such as visualizing the relationship and nodes of the `First-Class` Airports in Japan, and the city it located and the prefecture.

@@ -6,7 +6,7 @@ slug: /2017/11/08/you-dont-know-javascript-eslint-config/
 date: 2017-11-08T03:48:03.125Z
 description: 良好的代碼規範，能夠提高代碼的可閱性，使得項目維護更友好。除了自己設定一個規範外，我們也可以借鑒一下現在流行的代碼規範，讓我們成長之後，再去看細節。
 tags:
-  - 閱讀
+  -  Readings
   - JavaScript
 ---
 

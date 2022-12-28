@@ -6,7 +6,7 @@ slug: /2018/03/10/gitalk-error-validation-failed-442-solution/
 date: 2018-03-10T03:48:03.125Z
 description: "最近忙著大學的事情，少了時間寫博客文章。可是沒想到在過去那一篇文章發佈之後，就遇到 Gitalk 評論區出現 Error: Validation Failed. 這樣的問題，在 Github 上面和網友討論之後，想出了一個解決方法，希望可以拋磚引玉。"
 tags:
-  - 閱讀
+  -  Readings
   - JavaScript
 ---
 

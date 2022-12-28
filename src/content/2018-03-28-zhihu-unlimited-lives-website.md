@@ -6,7 +6,7 @@ slug: /2018/03/28/zhihu-unlimited-lives-website/
 date: 2018-03-28T03:48:03.125Z
 description: 一直收聽知乎無限 live 的時候，我都會想：如何才能更有效率地收聽這些計畫內的 live 呢？於是我心血來潮，把無限 live 的資料拿了下來，然後做一個數據流的網站。這個網站展示和源碼已經放在 Github。這個項目可能適合那些喜歡看到很多數據的同學。。。
 tags:
-  - 閱讀
+  -  Readings
 ---
 
 ## 前言

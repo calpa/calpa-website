@@ -2,6 +2,9 @@
 slug: how-to-create-neo4j-database-using-docker-and-docker-compose
 date: 2022-08-17T00:00:00.000Z
 title: How to create Neo4j database using docker and docker compose
+tags:
+  - docker
+  - docker-compose
 ---
 
 We can use the following command to start the Neo4j Container.

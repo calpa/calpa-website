@@ -6,7 +6,7 @@ slug: /2018/11/16/build-a-modern-website-using-gatsbyJS/
 date: 2018-11-16T03:48:03.125Z
 description: GatsbyJS 是一個現代化開發網站的網站產生系統，擁有完整、豐富且開源的生態圈。它利用 React + GraphQL 產生的多頁面應用，讓前端工程師，編輯，用戶都感到滿意。就讓我們一步步地探索這個系統吧。
 tags:
-  - 閱讀
+  -  Readings
 ---
 
 ## 前言

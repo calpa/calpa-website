@@ -2,6 +2,9 @@
 slug: how-to-fetch-wikidata-using-javascript-and-sparql-query
 date: 2022-09-07T00:00:00.000Z
 title: How to fetch Wikidata using JavaScript and SPARQL query
+tags:
+  - JavaScript
+  - SPARQL
 ---
 
 We can use `wikidata-sdk` to get the data from the Wikidata.
