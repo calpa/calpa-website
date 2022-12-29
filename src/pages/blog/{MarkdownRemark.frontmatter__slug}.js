@@ -4,11 +4,14 @@ import { Grid, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
 
+import { map } from 'lodash';
+
 import Layout from '../../components/Layout';
 import Sidebar from '../../components/Sidebar';
 
 import './blog.css';
-import Date from '../../components/Date';
+import UI from '@calpa/ui'
+const { Date, Tag } = UI;
 
 const MuiMarkdown = loadable(() => import('../../components/Markdown'));
 const Waline = loadable(() => import('../../components/Waline'));
@@ -44,7 +47,9 @@ export default function Template ({
           },
         }}
       >
-        <Grid container alignItems="center" justifyContent="space-between">
+        <Grid container alignItems="flex-start" justifyContent="space-between" sx={{
+          paddingBottom: `5px`
+        }}>
           <Grid xs>
             <Typography
               variant="h1"
@@ -54,6 +59,15 @@ export default function Template ({
           </Grid>
           <Grid xs={2}>
             <Date date={frontmatter.date.split('T')[0]} />
+          </Grid>
+
+          <Grid item xs={12}>
+            {map(frontmatter.tags, (tag, index) => (
+              <Tag
+                key={tag}
+                tag={tag}
+              >{tag}</Tag>
+            ))}
           </Grid>
         </Grid>
         <MuiMarkdown>{rawMarkdownBody}</MuiMarkdown>
@@ -72,6 +86,7 @@ export const pageQuery = graphql`
         date(formatString: "DD/MM/YYYY")
         slug
         title
+        tags
       }
       rawMarkdownBody
     }

@@ -19,7 +19,7 @@ Bcrypt is a **password hashing function** that is designed to be computationally
 
 When a user creates a new account or changes their password, the password is passed through the bcrypt function, which creates a hash of the password. This hash is then stored in the database in place of the original password. When the user logs in, their entered password is also passed through the bcrypt function, and the resulting hash is compared to the hash stored in the database. If the two hashes match, the user is authenticated.
 
-One of the key benefits of bcrypt is that it includes a "salt", which is a random string of characters that is added to the password before hashing. This helps to further protect against dictionary attacks, in which an attacker attempts to guess the password by hashing a list of common words and comparing the resulting hashes to the one stored in the database. Because the salt is different for each password, dictionary attacks are less effective against bcrypt hashes.
+One of the key benefits of bcrypt is that it includes a **salt**, which is a random string of characters that is added to the password before hashing. This helps to further protect against dictionary attacks, in which an attacker attempts to guess the password by hashing a list of common words and comparing the resulting hashes to the one stored in the database. Because the salt is different for each password, dictionary attacks are less effective against bcrypt hashes.
 
 ## Example
 
