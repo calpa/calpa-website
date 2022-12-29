@@ -47,8 +47,8 @@
     "markdown-to-jsx": "^7.1.7",
     "mui-markdown": "^0.5.3",
     "prop-types": "^15.8.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-syntax-highlighter": "^15.5.0"
   },
