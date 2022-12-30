@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.8.1
+  '@calpa/ui': 0.8.2
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -45,7 +45,7 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
 
 dependencies:
-  '@calpa/ui': 0.8.1_eslint@7.32.0
+  '@calpa/ui': 0.8.2_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -1656,8 +1656,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.8.1_eslint@7.32.0:
-    resolution: {integrity: sha512-yqSghFU+D9C58v4o9MQmMYCM6Kw6jbi+croq2GHaLKDo5taU0In/TiBFE/kz8RfppPsEAmgs5bRaRj9n54NxPQ==}
+  /@calpa/ui/0.8.2_eslint@7.32.0:
+    resolution: {integrity: sha512-N68AHI/QIRnBW4nXp2RXzGt48C3/V+jmQ/UuvQFRAa2nahKJ/nA20WQ88S8otGV4HiSeZL24Q1BdgqbmdZpuEw==}
     dependencies:
       '@babel/polyfill': 7.12.1
       '@babel/preset-react': 7.18.6

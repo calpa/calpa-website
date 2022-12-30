@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, navigate, Link } from 'gatsby';
 import {
-  Grid, Typography, Card, CardContent, Pagination
+  Grid, Typography, CardContent, Pagination
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 import { map } from 'lodash';
@@ -13,7 +13,7 @@ import Sidebar from '../components/Sidebar';
 import Date from '../components/Date';
 // import Tag from '@calpa/ui/dist/Tag';
 
-const { Tag } = UI;
+const { Tag, Card } = UI;
 
 function BlogPage (props) {
   const { data, pageContext } = props;
@@ -45,37 +45,12 @@ function BlogPage (props) {
           // sm={7}
           >
             <Card
-              sx={{
-                marginBottom: '10px',
-              }}
               onClick={() => navigate(`/blog${frontmatter.slug[0] !== '/' ? '/' : ''}${frontmatter.slug}`)}
+              title={frontmatter.title}
+              description={frontmatter.description}
+              date={frontmatter.date}
+              tags={frontmatter.tags}
             >
-              <CardActionArea>
-                <CardContent>
-                  <Grid container alignItems="center" justifyContent="space-between">
-                    <Typography
-                      variant="h1"
-                      fullWidth
-                      sx={{
-                        textDecoration: 'none',
-                      }}
-                    >
-                      {frontmatter.title}
-                    </Typography>
-                    <Date date={frontmatter.date} />
-                  </Grid>
-                  <Typography>
-                    {frontmatter.description}
-                  </Typography>
-                  {map(frontmatter.tags, (tag, index) => (
-                    <Tag
-                      key={index}
-                      tag={tag}
-                    >{tag}</Tag>
-                  ))
-                  }
-                </CardContent>
-              </CardActionArea>
             </Card>
           </Grid>
         ))}
@@ -110,9 +85,11 @@ BlogPage.propTypes = {
       nodes: PropTypes.arrayOf(PropTypes.shape({
         frontmatter: PropTypes.shape({
           title: PropTypes.string,
+          description: PropTypes.string,
           slug: PropTypes.string,
           date: PropTypes.string,
           headerImage: PropTypes.string,
+          tags: PropTypes.arrayOf(PropTypes.string),
         }),
       })),
     }),
