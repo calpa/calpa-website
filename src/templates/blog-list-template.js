@@ -45,11 +45,17 @@ function BlogPage (props) {
           // sm={7}
           >
             <Card
-              onClick={() => navigate(`/blog${frontmatter.slug[0] !== '/' ? '/' : ''}${frontmatter.slug}`)}
+              onClick={(e) => {
+                const isTag = Array.from(e.target.classList).includes('tag');
+                if (!isTag) {
+                  navigate(`/blog${frontmatter.slug[0] !== '/' ? '/' : ''}${frontmatter.slug}`)
+                }
+              }}
               title={frontmatter.title}
               description={frontmatter.description}
               date={frontmatter.date}
               tags={frontmatter.tags}
+              Link={Link}
             >
             </Card>
           </Grid>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Grid, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
@@ -66,6 +66,7 @@ export default function Template ({
               <Tag
                 key={tag}
                 tag={tag}
+                Link={Link}
               >{tag}</Tag>
             ))}
           </Grid>

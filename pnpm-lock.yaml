@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.8.3
+  '@calpa/ui': 0.8.5
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -46,7 +46,7 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
 
 dependencies:
-  '@calpa/ui': 0.8.3_eslint@7.32.0
+  '@calpa/ui': 0.8.5_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -1658,8 +1658,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.8.3_eslint@7.32.0:
-    resolution: {integrity: sha512-as4krX+72ur4PhHxYY6MUTIwrrPBTe25qVazOcz/ctK7Yt5RUz1SIXsElaODzfiATsHFBmt9Q3NbBIBdxkOodg==}
+  /@calpa/ui/0.8.5_eslint@7.32.0:
+    resolution: {integrity: sha512-1jISpX/t8la5jw2KqcATKnVLQ7xyZUp1rto6tU6hzYwBRVGue8jBiJXpCOQFyJGnY+whrDJu2ZXqUTgf+tuNbw==}
     dependencies:
       '@babel/polyfill': 7.12.1
       '@babel/preset-react': 7.18.6
@@ -4312,7 +4312,7 @@ packages:
   /@types/eslint/8.4.10:
     resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: false
 
