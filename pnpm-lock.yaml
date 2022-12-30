@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.8.2
+  '@calpa/ui': 0.8.3
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -14,6 +14,7 @@ specifiers:
   '@mui/icons-material': 5.8.2
   '@mui/material': 5.8.2
   '@waline/client': ^2.5.1
+  caniuse-lite: ^1.0.30001441
   cross-env: ^7.0.3
   eslint: ^7.32.0
   eslint-config-airbnb: ^19.0.4
@@ -45,7 +46,7 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
 
 dependencies:
-  '@calpa/ui': 0.8.2_eslint@7.32.0
+  '@calpa/ui': 0.8.3_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -58,6 +59,7 @@ dependencies:
   '@mui/icons-material': 5.8.2_nuasfk2nrv4p4q7dmhl5xwjvsi
   '@mui/material': 5.8.2_5rzy53przelm5jchjmb5vr6dxy
   '@waline/client': 2.14.4
+  caniuse-lite: 1.0.30001441
   cross-env: 7.0.3
   gatsby: 4.25.1_biqbaboplfbrettd7655fr4n2y
   gatsby-plugin-google-gtag: 5.3.0_xzvt5uz46qfzbv6w24zc4gpmqi
@@ -1656,8 +1658,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.8.2_eslint@7.32.0:
-    resolution: {integrity: sha512-N68AHI/QIRnBW4nXp2RXzGt48C3/V+jmQ/UuvQFRAa2nahKJ/nA20WQ88S8otGV4HiSeZL24Q1BdgqbmdZpuEw==}
+  /@calpa/ui/0.8.3_eslint@7.32.0:
+    resolution: {integrity: sha512-as4krX+72ur4PhHxYY6MUTIwrrPBTe25qVazOcz/ctK7Yt5RUz1SIXsElaODzfiATsHFBmt9Q3NbBIBdxkOodg==}
     dependencies:
       '@babel/polyfill': 7.12.1
       '@babel/preset-react': 7.18.6
