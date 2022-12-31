@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactMarkdown from 'markdown-to-jsx';
 import { Typography, Grid } from '@mui/material';
-import Link from '@mui/material/Link';
 
 import Code from '../Code';
+import CustomLink from '../CustomLink';
 
 function Wrapper ({ children }) {
   return (
@@ -32,7 +32,7 @@ const options = {
       props: { variant: 'h4' },
     },
     p: { component: Typography, props: { paragraph: true } },
-    a: { component: Link },
+    a: { component: CustomLink },
     code: {
       component: Code,
     },

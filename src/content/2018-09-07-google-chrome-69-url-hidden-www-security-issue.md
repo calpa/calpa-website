@@ -3,8 +3,8 @@ templateKey: blog-post
 id: 20180907a
 title: Google Chrome 69 地址欄隱藏子域名後暴露的安全問題
 date: 2018-09-07T03:48:03.125Z
-slug: /2018/09/07/google-chrome-69-url-hidden-www-security-issue/
-description: 定期更新軟件可以修復其自身的漏洞，即使是 Google Chrome，它的更新也是有安全問題的。在 Chrome 69 的版本裡面，`www` 被認定為 `trivial` 的子域名，因而隱藏了它之前的字眼。雖然可以提升一點用戶體驗，但卻帶來了另外一個風險點。。。
+slug: google-chrome-69-url-hidden-www-security-issue
+description: 定期更新軟件可以修復其自身的漏洞，即使是 Google Chrome，它的更新也是有安全問題的。在 Chrome 69 的版本裡面，`www` 被認定為 `trivial` 的子域名，因而隱藏了它之前的字眼。雖然可以提升一點用戶體驗，但卻帶來了另外一個風險點。
 tags:
   - GoogleChrome
   - 地址欄
@@ -14,7 +14,7 @@ tags:
 
 ## 前言
 
-定期更新軟件可以修復其自身的漏洞，即使是 Google Chrome，它的更新也是有安全問題的。在 Chrome 69 的版本裡面，`www` 被認定為 `trivial` 的子域名，因而隱藏了它之前的字眼。雖然可以提升一點用戶體驗，但卻帶來了另外一個風險點。。。
+定期更新軟件可以修復其自身的漏洞，即使是 Google Chrome，它的更新也是有安全問題的。在 Chrome 69 的版本裡面，`www` 被認定為 `trivial` 的子域名，因而隱藏了它之前的字眼。雖然可以提升一點用戶體驗，但卻帶來了另外一個風險點。
 
 ## 瀏覽器隱藏域名
 
@@ -52,7 +52,7 @@ tags:
 
 ## 後記
 
-Google Chrome 還是蠻多人用的，一更新就有很多人馬上更新了。我也不例外，雖然是看到地址欄的時候感覺怪怪的，但是沒有做過邊際測試的話，還是沒有發現這個問題的。。。
+Google Chrome 還是蠻多人用的，一更新就有很多人馬上更新了。我也不例外，雖然是看到地址欄的時候感覺怪怪的，但是沒有做過邊際測試的話，還是沒有發現這個問題的。
 
 如果你有什麼想法的話，可以到 Hacker News 裡面留言，或者在下方留言。
 
