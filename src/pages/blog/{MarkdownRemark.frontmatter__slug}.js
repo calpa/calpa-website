@@ -10,8 +10,7 @@ import Layout from '../../components/Layout';
 import Sidebar from '../../components/Sidebar';
 
 import './blog.css';
-import UI from '@calpa/ui'
-const { Date, Tag } = UI;
+import { Date, Tag } from '@calpa/ui'
 
 const MuiMarkdown = loadable(() => import('../../components/Markdown'));
 const Waline = loadable(() => import('../../components/Waline'));

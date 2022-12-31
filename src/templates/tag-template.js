@@ -6,13 +6,10 @@ import {
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 import { map } from 'lodash';
-import UI from '@calpa/ui';
+import { Tag, Card } from '@calpa/ui';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Date from '../components/Date';
-// import Tag from '@calpa/ui/dist/Tag';
-
-const { Tag, Card } = UI;
 
 function TagPage (props) {
     const { data, pageContext } = props;

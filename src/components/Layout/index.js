@@ -6,9 +6,7 @@ import { Helmet } from 'react-helmet';
 // components
 import NavBar from '../NavBar';
 // import Footer from '../Footer';
-import UI from '@calpa/ui'
-
-const { Footer } = UI;
+import { Footer } from '@calpa/ui';
 
 import '../../css/typography.css';
 
