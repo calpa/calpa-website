@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.9.1
+  '@calpa/ui': 0.9.4
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -49,7 +49,7 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
 
 dependencies:
-  '@calpa/ui': 0.9.1_eslint@7.32.0
+  '@calpa/ui': 0.9.4_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -1714,8 +1714,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.9.1_eslint@7.32.0:
-    resolution: {integrity: sha512-gQbW79Tt6XVEKqn5PjcXvlI+HUJU/QCpnDqT1AXsNE9w1MGFsrawYrYaUt6qomSagbLjC7XJiPrGN41MM96PFg==}
+  /@calpa/ui/0.9.4_eslint@7.32.0:
+    resolution: {integrity: sha512-vBZo8GMXfLMe7SrbtV/SSEP/uYW4mG05RizFZHMXH2E1BGzXrHg0z3pcLvRp1nHMny7bE8AXuH/9ISxiXLH2Ig==}
     dependencies:
       '@babel/polyfill': 7.12.1
       '@babel/preset-react': 7.18.6
@@ -1736,6 +1736,7 @@ packages:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 13.5.0
+      '@types/lodash': 4.14.191
       '@types/react': 18.0.26
       config: 3.3.8
       lodash: 4.17.21

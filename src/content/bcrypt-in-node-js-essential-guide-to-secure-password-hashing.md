@@ -5,7 +5,7 @@ title: "Bcrypt in Node.js: The Essential Guide to Secure Password Hashing"
 description: "Bcrypt is a password hashing function that is designed to be computationally expensive, meaning that it takes a lot of time and resources to compute. It is commonly used to store hashed passwords in databases so that the original password cannot be easily determined if the database is compromised."
 tags:
     - bcrypt
-    - node.js
+    - Node.js
     - security
     - database
     - salt

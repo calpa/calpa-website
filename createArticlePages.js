@@ -47,9 +47,14 @@ exports.createArticlePages = async ({ graphql, actions, reporter }) => {
   const numPages = Math.ceil(posts.length / postsPerPage);
   // Create a page for each page of the blog
   Array.from({ length: numPages }).forEach((_, i) => {
+    let pathUrl = `/blog/${i + 1}`
+    if (i === 0) {
+      pathUrl = `/`
+    }
+
     createPage({
       // Use the page number to set the path
-      path: `/blog/${i + 1}`,
+      path: pathUrl,
       // Use the blog-list-template component for the page
       component: path.resolve('./src/templates/blog-list-template.js'),
       // Pass the necessary context to the template component

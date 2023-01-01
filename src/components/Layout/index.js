@@ -4,11 +4,12 @@ import { Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
 // components
-import NavBar from '../NavBar';
+// import NavBar from '../NavBar';
 // import Footer from '../Footer';
-import { Footer } from '@calpa/ui';
+import { Footer, NavBar } from '@calpa/ui';
 
 import '../../css/typography.css';
+import { navigate } from 'gatsby';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
@@ -28,7 +29,23 @@ function Layout ({ children }) {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Helmet>
-      <NavBar />
+      <NavBar
+        color="default"
+        title="HOME"
+        pages={["Guest Book", "About"]}
+        avatarImage="https://i.imgur.com/F2HnBGC.png"
+        avatarAlt='Nyahello'
+        handleTitleClick={() => navigate("/")}
+        onClick={(event) => {
+          event.preventDefault();
+          const { id } = event.currentTarget;
+          if (id === 'blog-nav-item-Guest Book') {
+            navigate('/blog/guestbook/');
+          } else if (id === 'blog-nav-item-About') {
+            navigate('/blog/about/');
+          }
+        }}
+      />
       <Grid
         sx={{
           backgroundColor: '#f4f4f4',

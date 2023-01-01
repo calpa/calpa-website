@@ -73,7 +73,13 @@ function BlogPage (props) {
       >
 
         <Pagination count={count} page={currentPage}
-          onChange={(event, value) => navigate(`/blog/${value}`)}
+          onChange={(event, value) => {
+            if (value === 1) {
+              navigate(`/`);
+            } else {
+              navigate(`/blog/${value}`)
+            }
+          }}
           color="primary"
         />
       </Grid>
