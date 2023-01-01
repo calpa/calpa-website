@@ -23,6 +23,10 @@ function Layout ({ children }) {
           rel="stylesheet"
           href="https://unpkg.com/@waline/client@v2/dist/waline.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
       </Helmet>
       <NavBar />
       <Grid

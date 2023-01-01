@@ -15,7 +15,7 @@ const theme = createTheme({
   palette,
   typography: {
     fontSize: 16,
-    fontFamily: 'Iansui',
+    // fontFamily: 'Iansui',
     h1: {
       fontSize: 24,
       fontWeight: 600,
