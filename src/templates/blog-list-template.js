@@ -60,8 +60,7 @@ function BlogPage (props) {
               Link={Link}
               showDateComponent={false}
               showTagsComponent={false}
-            >
-            </Card>
+            />
           </Grid>
         ))}
       </Grid>
