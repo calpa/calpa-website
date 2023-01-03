@@ -29,8 +29,12 @@ function BlogPage (props) {
         justifyContent="center"
         sx={{
           marginTop: '20px',
-          marginLeft: '10px',
-          marginRight: '10px',
+          marginLeft: {
+            sm: '10px',
+          },
+          marginRight: {
+            sm: '10px',
+          }
         }}
         xs
       >
@@ -39,7 +43,8 @@ function BlogPage (props) {
             container
             flexDirection="column"
             item
-          // sm={7}
+            xs={12}
+            key={frontmatter.title}
           >
             <Card
               onClick={(e) => {
@@ -53,6 +58,8 @@ function BlogPage (props) {
               date={frontmatter.date}
               tags={frontmatter.tags}
               Link={Link}
+              showDateComponent={false}
+              showTagsComponent={false}
             >
             </Card>
           </Grid>

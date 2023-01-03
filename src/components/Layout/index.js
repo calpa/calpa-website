@@ -4,8 +4,6 @@ import { Grid } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
 // components
-// import NavBar from '../NavBar';
-// import Footer from '../Footer';
 import { Footer, NavBar } from '@calpa/ui';
 
 import '../../css/typography.css';
@@ -38,10 +36,10 @@ function Layout ({ children }) {
         handleTitleClick={() => navigate("/")}
         onClick={(event) => {
           event.preventDefault();
-          const { id } = event.currentTarget;
-          if (id === 'blog-nav-item-Guest Book') {
+          const { innerText } = event.target;
+          if (innerText === 'GUEST BOOK') {
             navigate('/blog/guestbook/');
-          } else if (id === 'blog-nav-item-About') {
+          } else if (innerText === 'ABOUT') {
             navigate('/blog/about/');
           }
         }}
@@ -49,6 +47,7 @@ function Layout ({ children }) {
       <Grid
         sx={{
           backgroundColor: '#f4f4f4',
+          paddingTop: `56px`,
         }}
       >
         <Grid
@@ -79,6 +78,3 @@ function Layout ({ children }) {
 
 export default Layout;
 
-Layout.propTypes = {
-  children: PropTypes.element.isRequired,
-};

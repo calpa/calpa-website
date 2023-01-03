@@ -8,6 +8,7 @@ import CustomLink from '../CustomLink';
 function Wrapper ({ children }) {
   return (
     <Grid
+      item
       sx={{
         width: '100%',
       }}

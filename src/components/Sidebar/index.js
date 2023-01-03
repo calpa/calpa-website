@@ -40,6 +40,10 @@ function Sidebar (props) {
         padding: '20px',
         marginTop: '20px',
         background: 'white',
+        display: {
+          xs: 'none',
+          sm: 'block',
+        }
       }}
     >
       <Tooltip title="Nyahello">

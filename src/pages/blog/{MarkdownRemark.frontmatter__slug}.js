@@ -30,47 +30,48 @@ export default function Template ({
       <Grid
         container
         item
-        xs={8}
-        // justifyContent="center"
+        xs={12}
+        sm={8}
         sx={{
           marginTop: '20px',
           marginLeft: '10px',
           marginRight: '10px',
           paddingTop: '16px',
-          paddingLeft: '16px',
-          paddingRight: '16px',
+          paddingLeft: {
+            xs: '5px',
+            sm: '16px',
+          },
+          paddingRight: {
+            xs: '5px',
+            sm: '16px',
+          },
           background: 'white',
           img: {
             maxWidth: '100%',
             objectFit: 'scale-down',
           },
         }}
+        flexDirection="column"
       >
-        <Grid container alignItems="flex-start" justifyContent="space-between" sx={{
-          paddingBottom: `5px`
-        }}>
-          <Grid xs>
-            <Typography
-              variant="h1"
-            >
-              {frontmatter.title}
-            </Typography>
-          </Grid>
-          <Grid xs={2}>
-            <Date date={frontmatter.date.split('T')[0]} />
-          </Grid>
 
-          <Grid item xs={12}>
-            {map(frontmatter.tags, (tag, index) => (
-              <Tag
-                key={tag}
-                tag={tag}
-                Link={Link}
-              >{tag}</Tag>
-            ))}
-          </Grid>
-        </Grid>
+        <Typography
+          variant="h1"
+        >
+          {frontmatter.title}
+        </Typography>
+
+
         <MuiMarkdown>{rawMarkdownBody}</MuiMarkdown>
+
+        <div>
+          {map(frontmatter.tags, (tag, index) => (
+            <Tag
+              key={tag}
+              tag={tag}
+              Link={Link}
+            >{tag}</Tag>
+          ))}
+        </div>
         <Waline />
       </Grid>
       <Sidebar />

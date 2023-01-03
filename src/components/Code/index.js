@@ -39,6 +39,7 @@ function Code ({ className = '', children }) {
 
     return (
         <Typography
+            component="span"
             sx={{
                 display: 'inline-block',
                 fontFamily: 'Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',

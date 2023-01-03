@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { init } from '@waline/client';
 
-function Waline(props) {
+function Waline (props) {
   const walineInstanceRef = useRef(null);
   const containerRef = React.createRef();
 
@@ -15,11 +15,11 @@ function Waline(props) {
     });
 
     return () => walineInstanceRef.current?.destroy();
-  }, []);
+  }, [walineInstanceRef]);
 
   useEffect(() => {
     walineInstanceRef.current?.update(props);
-  }, props);
+  }, [props]);
 
   return (
     <div
