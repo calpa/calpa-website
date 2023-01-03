@@ -4,20 +4,20 @@ import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 // prism languages
 // https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD
-import js from 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
-import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
-import json from 'react-syntax-highlighter/dist/esm/languages/prism/json';
-import python from 'react-syntax-highlighter/dist/esm/languages/prism/python';
-import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
-import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml';
-import cypher from 'react-syntax-highlighter/dist/esm/languages/prism/cypher'
+import { javascript, jsx, json, python, bash, yaml, cypher, typescript, tsx } from 'react-syntax-highlighter/dist/esm/languages/prism/';
 
 import { solarizedlight as style } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Typography } from '@mui/material';
 
-SyntaxHighlighter.registerLanguage('javascript', js);
-SyntaxHighlighter.registerLanguage('json', json);
+SyntaxHighlighter.registerLanguage('js', javascript);
+SyntaxHighlighter.registerLanguage('javascript', javascript);
 SyntaxHighlighter.registerLanguage('jsx', jsx);
+
+SyntaxHighlighter.registerLanguage('typescript', typescript);
+SyntaxHighlighter.registerLanguage('ts', typescript);
+SyntaxHighlighter.registerLanguage('tsx', tsx);
+
+SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('python', python);
 SyntaxHighlighter.registerLanguage('bash', bash);
 SyntaxHighlighter.registerLanguage('yaml', yaml);

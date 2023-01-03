@@ -58,7 +58,7 @@ function BlogPage (props) {
               date={frontmatter.date}
               tags={frontmatter.tags}
               Link={Link}
-              showDateComponent={false}
+              showDateComponent
               showTagsComponent={false}
             />
           </Grid>

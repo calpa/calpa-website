@@ -16,6 +16,8 @@ description: "TypeScript is a valuable tool for financial service organizations 
 date: 2023-01-03
 ---
 
+![Typescript header](https://i.imgur.com/MBmjw2h.png)
+
 As a full-stack developer, I have had the opportunity to work with various programming languages and technologies. Recently, I have been exploring the benefits of using TypeScript for web development, and I am convinced that it can be particularly attractive and beneficial for financial service applications.
 
 One of the main benefits of TypeScript is its ability to improve code quality. By catching errors before the code is deployed, TypeScript can help reduce the risk of issues arising in production. This is especially important in the financial industry, where even small errors can have significant consequences.
@@ -25,7 +27,9 @@ TypeScript can also enhance the maintainability of an application. Its strong ty
 In addition to improving code quality and maintainability, TypeScript can provide more vital type safety. Its type system can help ensure that code is correct and consistent, which is essential when working with financial data.
 
 ```ts
-function calculateTotalPrice(price: number, salesTax: number): number { return price + (price * salesTax); }
+function calculateTotalPrice(price: number, salesTax: number): number {
+    return price + (price * salesTax);
+}
 const total = calculateTotalPrice(100, 0.08);
 // total will be 108
 ```
