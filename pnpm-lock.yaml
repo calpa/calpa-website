@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.12.4
+  '@calpa/ui': 0.13.3
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -49,7 +49,7 @@ specifiers:
   react-syntax-highlighter: ^15.5.0
 
 dependencies:
-  '@calpa/ui': 0.12.4_eslint@7.32.0
+  '@calpa/ui': 0.13.3_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -1599,8 +1599,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.12.4_eslint@7.32.0:
-    resolution: {integrity: sha512-O7SVA+hMgeIgcJ5tt2PqtmIQf9TDEqayYmza1H28ZKxhhS0ZO+equpCyUTwmtaQtKkVYLU+CAY6dObnTCvnNfw==}
+  /@calpa/ui/0.13.3_eslint@7.32.0:
+    resolution: {integrity: sha512-m1DykB1SYiyY6iE3Cge/KLFAiMgJtWwKuLajylar1rCr9Y2p5LmVy+6DbbFkdj7dUSP/iOwCs2cZycT55E1kKw==}
     dependencies:
       '@emotion/react': 11.10.5_kzbn2opkn2327fwg5yzwzya5o4
       '@emotion/styled': 11.10.5_qvatmowesywn4ye42qoh247szu
@@ -1631,6 +1631,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_kofns73opi5yrr45uc44nabwji
       svg-japan: 1.1.2
+      tss-react: 4.5.2_hp5f5nkljdiwilp4rgxyefcplu
       typescript: 4.9.4
       use-immer: 0.8.1_immer@9.0.16+react@18.2.0
       web-vitals: 2.1.4
@@ -1638,6 +1639,7 @@ packages:
       - '@babel/core'
       - '@babel/plugin-syntax-flow'
       - '@babel/plugin-transform-react-jsx'
+      - '@emotion/server'
       - '@parcel/css'
       - '@swc/core'
       - '@testing-library/dom'
@@ -18262,6 +18264,23 @@ packages:
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
+    dev: false
+
+  /tss-react/4.5.2_hp5f5nkljdiwilp4rgxyefcplu:
+    resolution: {integrity: sha512-Q5JycexkHWgMm7SdJrazsAL9JEfaFfiumZSjXl2QHJH7F8Adg4L/0m993/UzcjGfZO7z9l4g+EDkVGDP8nfJFQ==}
+    peerDependencies:
+      '@emotion/react': ^11.4.1
+      '@emotion/server': ^11.4.0
+      react: ^16.8.0 || ^17.0.2 || ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/server':
+        optional: true
+    dependencies:
+      '@emotion/cache': 11.10.5
+      '@emotion/react': 11.10.5_kzbn2opkn2327fwg5yzwzya5o4
+      '@emotion/serialize': 1.1.1
+      '@emotion/utils': 1.2.0
+      react: 18.2.0
     dev: false
 
   /tsutils/3.21.0:

@@ -6,6 +6,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import { StaticImage } from 'gatsby-plugin-image';
 import { palette } from '../../gatsby-theme-material-ui-top-layout/theme';
+import { List } from '@calpa/ui';
 
 const avatarAlt = 'Calpa Liu';
 
@@ -83,25 +84,17 @@ function Sidebar (props) {
           marginBottom: '10px',
         }}
       />
-      <Grid container>
-
-        <Typography variant="h3">
-          Recent Posts
-        </Typography>
-        {latestPosts.map(({ node }, index) => (
-          <Link
-            to={`/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`}
-            key={node.frontmatter.slug}
-            style={{
-              textDecoration: 'none',
-              color: palette.blue.dark,
-              width: '100%',
-            }}
-          >
-            {index + 1}. {node.frontmatter.title}
-          </Link>
+      <List
+        topic="Recent Posts"
+        listItems={latestPosts.map(({ node }, index) => (
+          {
+            number: index + 1,
+            title: node.frontmatter.title,
+            url: `/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`
+          }
         ))}
-      </Grid>
+        Link={Link}
+      />
 
     </Grid>
   );

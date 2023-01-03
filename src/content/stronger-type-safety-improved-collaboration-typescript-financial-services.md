@@ -28,9 +28,9 @@ In addition to improving code quality and maintainability, TypeScript can provid
 
 ```ts
 function calculateTotalPrice(price: number, salesTax: number): number {
-    return price + (price * salesTax);
+    return price + (price * salesTax) / 100;
 }
-const total = calculateTotalPrice(100, 0.08);
+const total = calculateTotalPrice(100, 8);
 // total will be 108
 ```
 
