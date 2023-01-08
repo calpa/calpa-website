@@ -41,42 +41,52 @@ function Sidebar (props) {
         padding: '20px',
         marginTop: '20px',
         background: 'white',
+        // margin: `0 auto`,
         display: {
           xs: 'none',
           sm: 'block',
         }
       }}
     >
-      <Tooltip title="Nyahello">
-        <Link to="/blog/about/">
-          <StaticImage
-            alt={avatarAlt}
-            src="../../images/icon.jpeg"
-            width={width}
-            aspectRatio="1"
-            style={{
-              borderRadius: '100%',
-              cursor: 'pointer',
-            }}
-          />
-        </Link>
-      </Tooltip>
-
-      <Link
-        to="/blog/about/"
-        style={{
-          textDecoration: 'none',
-          color: palette.blue.dark,
+      <Grid
+        sx={{
+          textAlign: 'center'
         }}
       >
-        <Typography variant="h2">
-          Calpa Liu
-        </Typography>
-      </Link>
+        <Tooltip title="Nyahello">
+          <Link to="/blog/about/">
+            <StaticImage
+              alt={avatarAlt}
+              src="../../images/icon.jpeg"
+              width={width}
+              aspectRatio="1"
+              style={{
+                borderRadius: '100%',
+                cursor: 'pointer',
+              }}
+            />
+          </Link>
+        </Tooltip>
+        <Link
+          to="/blog/about/"
+          style={{
+            textDecoration: 'none',
+            color: palette.blue.dark,
+            textAlign: 'center',
+          }}
+        >
+          <Typography variant="h2">
+            Calpa Liu
+          </Typography>
+        </Link>
 
-      <Typography>
-        Nyahello
-      </Typography>
+        <Typography sx={{
+          textAlign: 'center',
+        }}>
+          Nyahello
+        </Typography>
+      </Grid>
+
       <Divider
         sx={{
           width: '100%',

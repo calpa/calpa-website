@@ -3,7 +3,7 @@ const { CacheProvider } = require("@emotion/react");
 const createCache = require('@emotion/cache').default;
 
 const cache = createCache({
-    "key": "custom"
+    "key": "cx"
 });
 
 // Wraps every page in a component

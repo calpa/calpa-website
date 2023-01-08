@@ -3,6 +3,7 @@ slug: discover-the-power-of-rss-with-rsshub-and-netnewswire
 date: 2022-12-31T00:00:00.000Z
 description: "Stay informed and connected with RSS, RSSHub, and NetNewsWire. In this article, we'll explore how these technologies can help you keep track of updates from your favorite websites and publications. Customize your news feed, choose your sources, and take control of the content you see with RSS. RSSHub allows you to generate custom feeds, while NetNewsWire is a news reader application for Mac and iOS devices."
 title: Discover the Power of RSS with RSSHub and NetNewsWire
+headerImage: https://i.imgur.com/s6cH5BC.png
 tags:
     - RSS
     - News reader

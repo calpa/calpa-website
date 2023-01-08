@@ -14,6 +14,7 @@ tags:
     - Application Development
 description: "TypeScript is a valuable tool for financial service organizations looking to develop high-quality, maintainable applications. In this article, we examine the ways in which TypeScript can enhance collaboration, code correctness, and consistency within teams."
 date: 2023-01-03
+headerImage: https://i.imgur.com/MBmjw2h.png
 ---
 
 ![Typescript header](https://i.imgur.com/MBmjw2h.png)

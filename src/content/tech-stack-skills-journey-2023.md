@@ -14,11 +14,14 @@ tags:
     - Career growth
     - Professional development
     - Learning goals
+headerImage: https://i.imgur.com/MBmjw2h.png
 ---
 
 As a developer, staying up-to-date with the latest technologies is an important part of staying competitive in the industry. In the coming dates, there are several tech stack areas that I want to focus on learning and improving my skills in. These areas include TypeScript and Smart Contracts. In this article, I will outline my plans for learning and improving my skills in these areas, including the steps I plan to take and the resources I will use. I will also discuss the benefits and advantages of learning these technologies and how they can help me grow as a developer.
 
 ## TypeScript
+
+![TypeScript](https://i.imgur.com/MBmjw2h.png)
 
 TypeScript is a popular superset of JavaScript that adds optional static typing to the language. To learn TypeScript, I plan to start by working through some beginner-level tutorials and exercises to get a feel for the language and its core concepts. I will also try using TypeScript in my own projects to get some hands-on experience with the language. As I become more comfortable with TypeScript, I will try working on more advanced projects and challenges to continue improving my skills.
 

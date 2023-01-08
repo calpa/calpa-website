@@ -4,6 +4,7 @@ date: 2022-09-04T00:00:00.000Z
 title: Import List of Towns in Japan to neo4j database
 tags:
   - neo4j
+headerImage: https://i.imgur.com/cJ4YV4F.png
 ---
 
 ![](https://i.imgur.com/cJ4YV4F.png)

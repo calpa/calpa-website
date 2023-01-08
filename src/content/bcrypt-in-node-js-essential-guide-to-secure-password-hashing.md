@@ -10,6 +10,7 @@ tags:
     - database
     - salt
     - hashing algorithm
+headerImage: https://i.imgur.com/39tRZV1.png
 ---
 
 ![](https://i.imgur.com/39tRZV1.png)

@@ -2,6 +2,7 @@
 title: Integrating svg-japan into a React and TypeScript Project
 slug: "integrating-svg-japan-into-react-and-typescript-project"
 description: "Generating maps of Japan with the svg-japan package can be a fun and powerful way to visualize data, but using it in a React application can be challenging. In this article, we'll show you how to wrap svg-japan in a custom React component and use it in a React and TypeScript project. By the end, you'll have a reusable map component that you can easily incorporate into your own projects."
+headerImage: https://i.imgur.com/fQTb11J.png
 date: 2023-01-02T00:00:00Z
 tags:
     - React

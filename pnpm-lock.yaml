@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@calpa/ui': 0.13.3
+  '@calpa/ui': 0.14.0
   '@emotion/react': ^11.9.0
   '@emotion/styled': ^11.8.1
   '@fortawesome/fontawesome-svg-core': ^6.1.1
@@ -51,7 +51,7 @@ specifiers:
   tss-react: ^4.5.2
 
 dependencies:
-  '@calpa/ui': 0.13.3_eslint@7.32.0
+  '@calpa/ui': 0.14.0_eslint@7.32.0
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@fortawesome/fontawesome-svg-core': 6.2.1
@@ -1603,8 +1603,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@calpa/ui/0.13.3_eslint@7.32.0:
-    resolution: {integrity: sha512-m1DykB1SYiyY6iE3Cge/KLFAiMgJtWwKuLajylar1rCr9Y2p5LmVy+6DbbFkdj7dUSP/iOwCs2cZycT55E1kKw==}
+  /@calpa/ui/0.14.0_eslint@7.32.0:
+    resolution: {integrity: sha512-tn4GmZR33nCuh04RzTbsT3L1+FrIK5AzjEonLoA9+8PgBm3o3kphEHtOtLLRQpw/2ZEsXA90RTKYfpZq5ZnOfw==}
     dependencies:
       '@emotion/react': 11.10.5_kzbn2opkn2327fwg5yzwzya5o4
       '@emotion/styled': 11.10.5_qvatmowesywn4ye42qoh247szu

@@ -60,6 +60,13 @@ function BlogPage (props) {
               Link={Link}
               showDateComponent
               showTagsComponent={false}
+              imageProps={frontmatter.headerImage && {
+                sx: {
+                  width: '100%',
+                  height: `300px`
+                },
+                image: frontmatter.headerImage,
+              }}
             />
           </Grid>
         ))}
