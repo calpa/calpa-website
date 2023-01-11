@@ -6,10 +6,9 @@ import {
 } from '@mui/material';
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 import { map } from 'lodash';
-import { Tag, Card } from '@calpa/ui';
+import { Tag, Card, List } from '@calpa/ui';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
-import Date from '../components/Date';
 
 function TagPage (props) {
     const { data, pageContext } = props;
@@ -29,16 +28,17 @@ function TagPage (props) {
                 }}
                 xs
             >
-                <Typography variant='h1'>
-                    {pageContext.tag}
-                </Typography>
-                {map(nodes, (node, index) => (
-                    <Link to={`/blog/${node.frontmatter.slug}`} style={{
-                        width: '100%',
-                    }}>
-                        {index + 1}. {node.frontmatter.title}
-                    </Link>
-                ))}
+                <List
+                    topic={pageContext.tag}
+                    listItems={map(nodes, (node, index) => (
+                        {
+                            number: index + 1,
+                            title: node.frontmatter.title,
+                            url: `/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`
+                        }
+                    ))}
+                    Link={Link}
+                />
             </Grid>
 
             <Sidebar />
