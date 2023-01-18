@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { Grid, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
 import loadable from '@loadable/component';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { map } from 'lodash';
 
@@ -20,6 +21,8 @@ export default function Template ({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, rawMarkdownBody } = markdownRemark;
+
+  const headerImage = getImage(markdownRemark.headerImage);
 
   return (
     <Layout>
@@ -60,6 +63,9 @@ export default function Template ({
           {frontmatter.title}
         </Typography>
 
+        {headerImage &&
+          <GatsbyImage image={headerImage} alt={frontmatter.title} />
+        }
 
         <MuiMarkdown>{rawMarkdownBody}</MuiMarkdown>
 
@@ -82,12 +88,19 @@ export default function Template ({
 export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      # html
+      id
       frontmatter {
         date(formatString: "DD/MM/YYYY")
         slug
         title
         tags
+      }
+      headerImage {
+        id
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
       }
       rawMarkdownBody
     }

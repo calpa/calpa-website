@@ -11,11 +11,9 @@ tags:
     - Component Library
     - UI Development
     - React.js
-headerImage: https://i.imgur.com/piG1KF6.png
+headerImageUrl: https://i.imgur.com/piG1KF6.png
 description: Storybook 是一個支援多種前端框架的工具，它支持 React.js，Vue.js，Angular。我們可以在單獨的環境中進行組件的開發與測試。它能夠幫助我們更快速地構建和測試組件，並確保它們在應用程式中的可用性。在這裏我希望分享一些關於 Storybook 的心得。
 ---
-
-![](https://i.imgur.com/piG1KF6.png)
 
 ## 前言
 

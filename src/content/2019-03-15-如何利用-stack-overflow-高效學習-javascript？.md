@@ -5,7 +5,7 @@ date: 2019-03-15T02:38:23.251Z
 description: 帶著問題去學習，會比單純看書的效果好得多。而 Stack Overflow 網站雲集世界上不同程序員遇到的問題，我們可以透過它來高效學習技能，比如說前端工程師的技能：JavaScript。
 tags:
   - JavaScript
-headerImage: 'https://i.imgur.com/VvGbog9.jpg'
+headerImageUrl: 'https://i.imgur.com/VvGbog9.jpg'
 templateKey: blog-post
 ---
 帶著問題去學習，會比單純看書的效果好得多。而 Stack Overflow 網站雲集世界上不同程序員遇到的問題，我們可以透過它來高效學習技能，比如說前端工程師的技能：JavaScript。

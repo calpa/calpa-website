@@ -10,7 +10,7 @@ tags:
   - React
   - XSS
   - GatsbyJS
-headerImage: 'https://i.imgur.com/3GRiphI.png'
+headerImageUrl: 'https://i.imgur.com/3GRiphI.png'
 templateKey: blog-post
 ---
 

@@ -57,7 +57,7 @@ function Sidebar (props) {
           <Link to="/blog/about/">
             <StaticImage
               alt={avatarAlt}
-              src="../../images/icon.jpeg"
+              src="https://i.imgur.com/F2HnBGC.png"
               width={width}
               aspectRatio="1"
               style={{

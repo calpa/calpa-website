@@ -7,6 +7,7 @@ import {
 import { CardActionArea, Button } from 'gatsby-theme-material-ui';
 import { map } from 'lodash';
 import { Tag, Card } from '@calpa/ui'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -38,7 +39,7 @@ function BlogPage (props) {
         }}
         xs
       >
-        {nodes.map(({ frontmatter }) => (
+        {nodes.map(({ frontmatter, headerImage }) => (
           <Grid
             container
             flexDirection="column"
@@ -60,12 +61,15 @@ function BlogPage (props) {
               Link={Link}
               showDateComponent
               showTagsComponent={false}
-              imageProps={frontmatter.headerImage && {
+              imageProps={{
                 sx: {
                   width: '100%',
                   height: `300px`
                 },
-                image: frontmatter.headerImage,
+                component: (props) => <GatsbyImage
+                  {...props}
+                  image={getImage(headerImage)}
+                />,
               }}
             />
           </Grid>
@@ -110,7 +114,7 @@ BlogPage.propTypes = {
           description: PropTypes.string,
           slug: PropTypes.string,
           date: PropTypes.string,
-          headerImage: PropTypes.string,
+          headerImageUrl: PropTypes.string,
           tags: PropTypes.arrayOf(PropTypes.string),
         }),
       })),
@@ -146,9 +150,16 @@ query blogListQuery($skip: Int!, $limit: Int!) {
         title
         slug
         date(formatString: "DD/MM/YYYY")
-        headerImage
         description
         tags
+        headerImageUrl
+      }
+      headerImage {
+        id
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
       }
     }
   }

@@ -68,7 +68,7 @@ TagPage.propTypes = {
                         title: PropTypes.string.isRequired,
                         slug: PropTypes.string.isRequired,
                         date: PropTypes.string.isRequired,
-                        headerImage: PropTypes.string,
+                        headerImageUrl: PropTypes.string,
                         description: PropTypes.string.isRequired,
                         tags: PropTypes.arrayOf(PropTypes.string).isRequired,
                     }).isRequired,
@@ -90,7 +90,6 @@ query tagListQuery($tag: String!) {
           title
           slug
           date(formatString: "DD/MM/YYYY")
-          headerImage
           description
           tags
         }

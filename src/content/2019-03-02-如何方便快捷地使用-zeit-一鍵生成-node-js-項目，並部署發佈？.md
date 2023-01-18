@@ -11,7 +11,7 @@ tags:
   - React
   - 免費
   - 實用
-headerImage: 'https://i.imgur.com/Lgfa2Eu.png'
+headerImageUrl: 'https://i.imgur.com/Lgfa2Eu.png'
 templateKey: blog-post
 id: a13adea8-84f6-5965-904e-9a2f5a5f1c1e
 ---

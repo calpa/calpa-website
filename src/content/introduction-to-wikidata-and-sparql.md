@@ -2,11 +2,10 @@
 slug: introduction-to-wikidata-and-sparql
 date: 2022-09-06T00:00:00.000Z
 title: Introduction to Wikidata and SPARQL
+headerImageUrl: https://i.imgur.com/L7H6R6K.png
 tags:
   - SPARQL
 ---
-
-![](https://i.imgur.com/L7H6R6K.png)
 
 Wikidata is a free multilingual database that available for everyone to query information from wikipedia. We can use it to get the statistics, dates, locations that stored in the wikipedia.
 
