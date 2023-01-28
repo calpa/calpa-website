@@ -143,6 +143,11 @@ query blogListQuery($skip: Int!, $limit: Int!) {
     sort: {fields: frontmatter___date, order: DESC},
     limit: $limit,
     skip: $skip,
+    filter: {
+      fileAbsolutePath: {
+        regex: "/content.*/"
+      }
+    }
   ) {
     totalCount
     nodes {

@@ -12,10 +12,18 @@ const avatarAlt = 'Calpa Liu';
 
 const width = 120;
 
-function Sidebar (props) {
+function Sidebar(props) {
   const data = useStaticQuery(graphql`
   {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 10) {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC},
+      limit: 10,
+      filter: {
+				fileAbsolutePath: {
+					regex: "/content.*/"
+        }
+      }
+    ) {
       edges {
         node {
           frontmatter {

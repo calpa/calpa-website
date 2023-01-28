@@ -10,7 +10,14 @@ export const createArticlePages = async ({ graphql, actions, reporter }: Pick<Cr
   // Run a GraphQL query to retrieve data for all markdown files in the project
   const result = await graphql(`
   {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC },
+      limit: 1000,
+      filter: {
+				fileAbsolutePath: {
+					regex: "/content.*/"
+        }
+      }) {
       edges {
         node {
           frontmatter {
@@ -34,6 +41,11 @@ export const createArticlePages = async ({ graphql, actions, reporter }: Pick<Cr
   // Create a redirect for each markdown file
   posts.forEach((post) => {
     const { node } = post;
+    const slug = node.frontmatter.slug;
+    if (slug === undefined || slug === null) {
+      return;
+    }
+
     const obj = {
       fromPath: node.frontmatter.slug,
       // Use the slug from the frontmatter to set the toPath

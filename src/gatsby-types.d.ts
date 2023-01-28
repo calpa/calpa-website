@@ -679,6 +679,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.frontmatter.description'
   | 'childMarkdownRemark.frontmatter.headerImageUrl'
   | 'childMarkdownRemark.frontmatter.id'
+  | 'childMarkdownRemark.frontmatter.name'
   | 'childMarkdownRemark.frontmatter.slug'
   | 'childMarkdownRemark.frontmatter.tags'
   | 'childMarkdownRemark.frontmatter.templateKey'
@@ -903,6 +904,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.frontmatter.description'
   | 'childrenMarkdownRemark.frontmatter.headerImageUrl'
   | 'childrenMarkdownRemark.frontmatter.id'
+  | 'childrenMarkdownRemark.frontmatter.name'
   | 'childrenMarkdownRemark.frontmatter.slug'
   | 'childrenMarkdownRemark.frontmatter.tags'
   | 'childrenMarkdownRemark.frontmatter.templateKey'
@@ -1975,6 +1977,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.description'
   | 'frontmatter.headerImageUrl'
   | 'frontmatter.id'
+  | 'frontmatter.name'
   | 'frontmatter.slug'
   | 'frontmatter.tags'
   | 'frontmatter.templateKey'
@@ -2049,6 +2052,7 @@ type MarkdownRemarkFieldsEnum =
   | 'headerImage.childMarkdownRemark.frontmatter.description'
   | 'headerImage.childMarkdownRemark.frontmatter.headerImageUrl'
   | 'headerImage.childMarkdownRemark.frontmatter.id'
+  | 'headerImage.childMarkdownRemark.frontmatter.name'
   | 'headerImage.childMarkdownRemark.frontmatter.slug'
   | 'headerImage.childMarkdownRemark.frontmatter.tags'
   | 'headerImage.childMarkdownRemark.frontmatter.templateKey'
@@ -2178,6 +2182,7 @@ type MarkdownRemarkFieldsEnum =
   | 'headerImage.childrenMarkdownRemark.frontmatter.description'
   | 'headerImage.childrenMarkdownRemark.frontmatter.headerImageUrl'
   | 'headerImage.childrenMarkdownRemark.frontmatter.id'
+  | 'headerImage.childrenMarkdownRemark.frontmatter.name'
   | 'headerImage.childrenMarkdownRemark.frontmatter.slug'
   | 'headerImage.childrenMarkdownRemark.frontmatter.tags'
   | 'headerImage.childrenMarkdownRemark.frontmatter.templateKey'
@@ -2408,6 +2413,7 @@ type MarkdownRemarkFrontmatter = {
   readonly description: Maybe<Scalars['String']>;
   readonly headerImageUrl: Maybe<Scalars['String']>;
   readonly id: Maybe<Scalars['String']>;
+  readonly name: Maybe<Scalars['String']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly templateKey: Maybe<Scalars['String']>;
@@ -2427,6 +2433,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly headerImageUrl: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly templateKey: InputMaybe<StringQueryOperatorInput>;
@@ -4406,7 +4413,7 @@ type TagPageQueryVariables = Exact<{
 }>;
 
 
-type TagPageQuery = { readonly allMarkdownRemark: { readonly totalCount: number, readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string, readonly slug: string | null, readonly date: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }> } };
+type TagPageQuery = { readonly allMarkdownRemark: { readonly totalCount: number, readonly nodes: ReadonlyArray<{ readonly frontmatter: { readonly title: string, readonly slug: string | null, readonly date: string | null, readonly description: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }> }, readonly file: { readonly id: string, readonly childMarkdownRemark: { readonly id: string, readonly rawMarkdownBody: string | null } | null } | null };
 
 type TagsPageQueryVariables = Exact<{ [key: string]: never; }>;
 

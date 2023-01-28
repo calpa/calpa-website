@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import type { PageProps } from 'gatsby'
 import {
@@ -40,8 +39,23 @@ function TagPage(props: PageProps<Queries.TagPageQuery, Queries.TagPageQueryVari
                 }}
                 xs
             >
+                <Typography variant='h1'>
+                    {tag}
+                </Typography>
+
+                <Link to="/blog/tags">
+                    &lt;&minus; Tags
+                </Link>
+
+                <Typography>
+                    {data.file?.childMarkdownRemark?.rawMarkdownBody}
+                </Typography>
+
+
+
                 <List
-                    topic={`${tag} (${totalCount})`}
+                    topic=""
+                    // topic={`${tag} (${totalCount})`}
                     listItems={map(nodes, (node, index) => (
                         {
                             number: index + 1,
@@ -74,7 +88,10 @@ export default TagPage;
 
 export const query = graphql`
 query TagPage($tag: String!) {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {tags: {in: [$tag]}}}) {
+    allMarkdownRemark(
+      sort: {fields: frontmatter___date, order: DESC}
+      filter: {frontmatter: {tags: {in: [$tag]}}}
+    ) {
       totalCount
       nodes {
         frontmatter {
@@ -84,6 +101,16 @@ query TagPage($tag: String!) {
           description
           tags
         }
+      }
+    }
+    file(
+      sourceInstanceName: {eq: "noun"}
+      childMarkdownRemark: {frontmatter: {name: {eq: $tag}}}
+    ) {
+      id
+      childMarkdownRemark {
+        id
+        rawMarkdownBody
       }
     }
   }

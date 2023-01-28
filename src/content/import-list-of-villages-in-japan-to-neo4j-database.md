@@ -4,7 +4,7 @@ date: 2022-08-23T00:00:00.000Z
 title: Import List of Villages in Japan to neo4j Database
 tags:
   - JavaScript
-  - neo4j
+  - Neo4j
 headerImageUrl: https://i.imgur.com/3lgGBfN.png
 ---
 

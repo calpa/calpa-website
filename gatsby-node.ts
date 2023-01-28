@@ -33,9 +33,13 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = async ({
 }) => {
   // For all MarkdownRemark nodes that have a featured image url, call createRemoteFileNode
   if (
-    node.internal.type === "MarkdownRemark" &&
-    node.frontmatter?.headerImageUrl
+    node.internal.type === "MarkdownRemark"
   ) {
+    const headerImageUrl = node.frontmatter?.headerImageUrl
+    if (headerImageUrl === undefined || headerImageUrl === null) {
+      return;
+    }
+
     const fileNode = await createRemoteFileNode({
       url: node.frontmatter.headerImageUrl, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create

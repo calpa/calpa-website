@@ -3,7 +3,7 @@ slug: fetch-japan-airports-and-create-nodes-in-neo4j
 date: 2022-08-22T00:00:00.000Z
 title: Fetch Japan Airports and create nodes in neo4j
 tags:
-  - neo4j
+  - Neo4j
   - cypher
   - JavaScript
 ---

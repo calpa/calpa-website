@@ -1,7 +1,13 @@
 import type { CreatePagesArgs } from 'gatsby';
 export const getTagsQuery = `
 query getTags {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    filter: {
+      fileAbsolutePath: {
+        regex: "/content.*/"
+      }
+    }
+  ) {
     edges {
       node {
         frontmatter {
