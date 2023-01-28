@@ -7,8 +7,8 @@ date: 2017-08-31T03:48:03.125Z
 description: React-markdown 可以把 markdown 語句轉譯為 React 組件，十分方便使用。
 tags:
   - JavaScript
-  - 前端
-  - ReactJS
+  - Frontend
+  - React.js
 ---
 
 ## 前言

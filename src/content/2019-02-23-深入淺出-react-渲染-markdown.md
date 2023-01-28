@@ -7,7 +7,7 @@ description: >-
   React 原生的 dangerouslySetInnerHTML 方法直接放到組件裡面。
 tags:
   - Markdown
-  - React
+  - React.js
   - XSS
   - GatsbyJS
 headerImageUrl: 'https://i.imgur.com/3GRiphI.png'

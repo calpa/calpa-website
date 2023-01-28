@@ -8,7 +8,7 @@ description: 這次 Google 開發者大會請來了 Lighthouse 的工程師 - Er
 tags:
   - Google
   - Chrome
-  - 前端
+  - Frontend
   - Puppeteer
 ---
 

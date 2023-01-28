@@ -6,7 +6,7 @@ date: 2017-06-12T03:48:03.125Z
 slug: /2017/06/12/hong-kong-open-data-from-zero-to-give-up/
 description: 經過 2017 年香港開源年會之後，我都沒有去看香港的開放數據做得怎麼樣。今天香港正懸掛八號風球，正好是一個機會去了解一下。香港政府有一個開放數據平台，資料一線通，以多種檔案格式提供多個政府部門類別，機構的一些查詢資料，比如說天氣預報，中學教育統計資料。值得注意的是，這些檔案並不是 ODF，而是 xls, xml, csv, json, gif, txt, tif。。。
 tags:
-  - 前端
+  - Frontend
   - JavaScript
   - API
 ---

@@ -7,7 +7,7 @@ date: 2017-06-01T03:48:03.125Z
 description: 利用 markdown 製作投影片，其實可以很簡單。
 tags:
   - JavaScript
-  - 前端
+  - Frontend
 ---
 
 利用 markdown 製作投影片，其實可以很簡單。

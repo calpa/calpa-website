@@ -7,9 +7,9 @@ date: 2018-11-23T03:48:03.125Z
 description: 上次我們提到 GatsbyJS，它是一個可以獲取任意數據，並生成靜態化網站的系統。這一次，就讓我們以 Calpa 的技術博客作為例子來開始架構網站吧。
 tags:
   - GatsbyJS
-  - ReactJS
+  - React.js
   - JavaScript
-  - 前端
+  - Frontend
 ---
 
 ## 前言

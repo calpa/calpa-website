@@ -7,7 +7,7 @@ date: 2018-09-17T03:48:03.125Z
 description: 如果你熟悉申請大學流程的話，你也可以理解 JavaScript 的 filter 方法。相對於 JavaScript 裡面的 map() 和 reduce() 方法來說，filter() 方法也許是最一目了然的方法。
 tags:
   - JavaScript
-  - 前端
+  - Frontend
 ---
 
 ## 前言

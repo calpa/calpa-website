@@ -8,7 +8,7 @@ description: >-
 tags:
   - ZEIT
   - NOW
-  - React
+  - React.js
   - 免費
   - 實用
 headerImageUrl: 'https://i.imgur.com/Lgfa2Eu.png'

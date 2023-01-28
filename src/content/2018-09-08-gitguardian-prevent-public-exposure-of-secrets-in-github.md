@@ -6,7 +6,7 @@ slug: /2018/09/08/gitguardian-prevent-public-exposure-of-secrets-in-github/
 date: 2018-09-08T03:48:03.125Z
 description: Github 作為程序員必爭之地，上傳的代碼無可避免地遭到 24x7 的自動機器人掃描。百密一疏，就算是安全意識良好的同學也會不小心上傳敏感信息。若是使用 GitGuardian 的話，我們可以馬上收到通知，處理問題，及時止血。
 tags:
-  - 工具
+  - Tools
 ---
 
 ## 前言

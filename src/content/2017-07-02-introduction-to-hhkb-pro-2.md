@@ -8,7 +8,7 @@ description: 我一開始拿到 Happy Hacking KeyBoard Pro 2 時，我就問為�
 tags:
   - Keyboard
   - HHKB
-  - 工具
+  - Tools
 ---
 
 ## 前言

@@ -1,7 +1,9 @@
-const path = require('path');
-const { get } = require('lodash');
+import type { CreatePagesArgs } from 'gatsby';
+import { get } from 'lodash';
+import path from "path";
 
-exports.createArticlePages = async ({ graphql, actions, reporter }) => {
+
+export const createArticlePages = async ({ graphql, actions, reporter }: Pick<CreatePagesArgs, "graphql" | "actions" | "reporter">) => {
   // Destructure the createPage and createRedirect actions from the actions object
   const { createPage, createRedirect } = actions;
 

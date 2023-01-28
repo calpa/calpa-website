@@ -5,7 +5,7 @@ description: "Generating maps of Japan with the svg-japan package can be a fun a
 headerImageUrl: https://i.imgur.com/fQTb11J.png
 date: 2023-01-02T00:00:00Z
 tags:
-    - React
+    - React.js
     - TypeScript
     - Maps
     - Japan

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, navigate, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import type { PageProps } from 'gatsby'
 import {
     Grid, Typography, CardContent, Pagination
 } from '@mui/material';
@@ -10,11 +11,22 @@ import { Tag, Card, List } from '@calpa/ui';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 
-function TagPage (props) {
+function getUrl(slug: string | null | undefined) {
+    if (slug === undefined || slug === null) {
+        return;
+    }
+    if (slug[0] === '/') {
+        return `/blog${slug}`
+    }
+
+    return `/blog/${slug}`;
+}
+
+function TagPage(props: PageProps<Queries.TagPageQuery, Queries.TagPageQueryVariables>) {
     const { data, pageContext } = props;
     const { allMarkdownRemark } = data;
-    const { nodes } = allMarkdownRemark;
-
+    const { nodes, totalCount } = allMarkdownRemark;
+    const { tag } = pageContext;
     return (
         <Layout>
             <Grid
@@ -29,12 +41,12 @@ function TagPage (props) {
                 xs
             >
                 <List
-                    topic={pageContext.tag}
+                    topic={`${tag} (${totalCount})`}
                     listItems={map(nodes, (node, index) => (
                         {
                             number: index + 1,
-                            title: node.frontmatter.title,
-                            url: `/blog${node.frontmatter.slug[0] === '/' ? node.frontmatter.slug : `/${node.frontmatter.slug}`}`
+                            title: node.frontmatter?.title,
+                            url: getUrl(node.frontmatter?.slug)
                         }
                     ))}
                     Link={Link}
@@ -58,31 +70,10 @@ function TagPage (props) {
     );
 }
 
-TagPage.propTypes = {
-    data: PropTypes.shape({
-        allMarkdownRemark: PropTypes.shape({
-            totalCount: PropTypes.number.isRequired,
-            nodes: PropTypes.arrayOf(
-                PropTypes.shape({
-                    frontmatter: PropTypes.shape({
-                        title: PropTypes.string.isRequired,
-                        slug: PropTypes.string.isRequired,
-                        date: PropTypes.string.isRequired,
-                        headerImageUrl: PropTypes.string,
-                        description: PropTypes.string.isRequired,
-                        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-                    }).isRequired,
-                }).isRequired
-            ).isRequired,
-        }).isRequired,
-    }).isRequired,
-}
-
-
 export default TagPage;
 
 export const query = graphql`
-query tagListQuery($tag: String!) {
+query TagPage($tag: String!) {
     allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {tags: {in: [$tag]}}}) {
       totalCount
       nodes {

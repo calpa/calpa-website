@@ -7,7 +7,7 @@ date: 2017-05-16T03:48:03.125Z
 description: 初探 React 組件生命週期
 tags:
   - JavaScript
-  - 前端
+  - Frontend
 ---
 
 ## 組件

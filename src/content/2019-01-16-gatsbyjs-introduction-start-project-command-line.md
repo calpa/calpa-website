@@ -7,7 +7,7 @@ date: 2019-01-16T03:48:03.125Z
 description: GatsbyJS 提供了一個簡單易用的命令行工具，我們可以透過它來構建一個基本的 React 網站，並實時看到修改代碼所帶來的變化。
 tags:
   - GatsbyJS
-  - ReactJS
+  - React.js
 ---
 
 ## 命令行工具

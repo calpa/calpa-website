@@ -7,7 +7,7 @@ date: 2018-09-19T03:48:03.125Z
 description: day.js 可以提供處理日期的方法，並且和 Moment.js 擁有一模一樣的方法。使用輕量 day.js 能夠大大省下用戶需要加載的體積，加速網站加載速度。
 tags:
   - JavaScript
-  - 前端
+  - Frontend
 ---
 
 ## 前言

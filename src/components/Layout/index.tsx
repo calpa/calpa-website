@@ -11,7 +11,25 @@ import { navigate } from 'gatsby';
 
 const defaultPageTitle = 'Calpa\'s Blog';
 
-function Layout ({ children }) {
+enum Pages {
+  "Guest Book",
+  "About",
+  "Tags"
+}
+
+// Helper
+function StringIsNumber(value: string | number) {
+  return isNaN(Number(value)) === false;
+}
+
+// Turn enum into array
+function enumToArray(enumme: any): string[] {
+  return Object.keys(enumme)
+    .filter(StringIsNumber)
+    .map(key => enumme[key]);
+}
+
+function Layout({ children }) {
   return (
     <>
       <Helmet
@@ -30,17 +48,24 @@ function Layout ({ children }) {
       <NavBar
         color="default"
         title="HOME"
-        pages={["Guest Book", "About"]}
+        pages={enumToArray(Pages)}
         avatarImage="https://i.imgur.com/F2HnBGC.png"
         avatarAlt='Nyahello'
         handleTitleClick={() => navigate("/")}
         onClick={(event) => {
           event.preventDefault();
-          const { innerText } = event.target;
-          if (innerText === 'GUEST BOOK') {
+          let innerText: string | undefined = event.target.innerText;
+          if (!innerText) {
+            return;
+          }
+          innerText = innerText.toLowerCase();
+
+          if (innerText === 'guest book') {
             navigate('/blog/guestbook/');
-          } else if (innerText === 'ABOUT') {
+          } else if (innerText === 'about') {
             navigate('/blog/about/');
+          } else if (innerText === 'tags') {
+            navigate('/blog/tags/');
           }
         }}
       />
